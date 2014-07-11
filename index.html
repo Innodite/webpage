@@ -10,12 +10,21 @@
 		<script type="text/javascript" src="js/less-1.5.0.min.js"></script>
 		<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
    		<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+                <script type="text/javascript" src="js/easytabs/jquery.hashchange.min.js"></script>
+                <script type="text/javascript" src="js/easytabs/jquery.easytabs.min.js"></script>
  <!--::::::::::::::::::INICIO SCRIPT SLIDER::::::::::::::::-->
 		<script type="text/javascript">
-    				$(window).load(function() {
-       				 $('#slider').nivoSlider();
-   					 });
+    				/*$(window).load(function() {
+                                    $('#slider').nivoSlider();
+                                    $('#tab-container').easytabs();
+                                });*/
    		</script>
+                <script type="text/javascript">
+                    $(document).ready( function() { 
+                        $('#slider').nivoSlider();
+                        $('#tab-container').easytabs();
+                    });
+                </script>
 <!--:::::::::::::::::::::FIN SCRIPT SLIDER:::::::::::::::::-->
 <!--:::::::::::::::::::::::::::INICIO TWITTER::::::::::::::::::::::-->
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");	
@@ -46,6 +55,17 @@
 
 	
 		</script>
+                <style>
+                    /* Example Styles for Demo */
+                    .etabs { margin: 0; padding: 0; text-align: left; }
+                    .tab { display: inline-block; zoom:1; *display:inline; background: #eee; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
+                    .tab a { font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
+                    .tab a:hover { text-decoration: underline; }
+                    .tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; }
+                    .tab a.active { font-weight: bold; }
+                    .tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
+                    .panel-container { margin-bottom: 10px; }
+                </style>
 	</head>
 	<body>		
 		<header>
@@ -215,15 +235,27 @@
 <!--:::::::::::::::::::::::::::::::::::::::::INICIO REDES SOCIALES:::::::::::::::::::::::::::::::::::::-->
 			</article> <!--Fin Contenedor Principal-->	
 
-			<article class="columnas columna4">	
-				<div class="column">							
-					<div id="fb-root"></div><!--::::::::::::Facebook::::::::-->		
-					<div class="fb-like-box" data-href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts" data-width="30px" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false">
-					</div>								 
-					<div class="grid-unit"> <!--::::::::::Twitter:::::::::::-->	
-						<a class="twitter-timeline" href="https://twitter.com/innodite" data-widget-id="477036300768256001">Tweets por @innodite</a>
-					</div>	     						
-				</div>
+			<article class="columnas columna4">
+                            <div id="tab-container" class='tab-container'>
+                                <ul class='etabs'>
+                                  <li class='tab'><a href="#tabs1-fb">Facebook</a></li>
+                                  <li class='tab'><a href="#tabs1-tw">Twitter</a></li>
+                                </ul>
+                                <div class='panel-container'>
+                                 <!--<div class="column"></div>-->
+                                 <div id="tabs1-fb">
+                                    <h2>Twitter</h2>
+                                    <div id="fb-root"></div><!--::::::::::::Facebook::::::::-->		
+				    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts" data-width="30px" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+                                 </div>
+                                 <div id="tabs1-tw">
+                                    <h2>FaceBook</h2>
+                                    <div class="grid-unit"> <!--::::::::::Twitter:::::::::::-->	
+                                        <a class="twitter-timeline" href="https://twitter.com/innodite" data-widget-id="477036300768256001">Tweets por @innodite</a>
+                                    </div>
+                                 </div>
+                                </div>
+                            </div>
 			</article>	
 
 		</div>	<!--Fin Contenedor Columnas-->	  

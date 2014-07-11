@@ -9,7 +9,7 @@ if (isset($_POST['opc'])){
     $objeto = new contacto();
     $out = "";
     switch ($_POST['opc']) {
-        case "IN": $out = $objeto->agregarComentario($_POST['nombre'], $_POST['telefono'], $_POST['correo'], $_POST['comentario']); break;
+        case "IN": $out = $objeto->agregarComentario($_POST['name'], $_POST['tlf'], $_POST['email'], $_POST['comentario']); break;
       
     }
     echo $out;

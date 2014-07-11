@@ -9,31 +9,33 @@
 		<link rel="stylesheet/less" type="text/less" href="../less/estilos.less"/>
 		<script type="text/javascript" src="../js/less-1.5.0.min.js"></script>
 		<script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
-		 <script type="text/javascript">
-                    function clearList(){
-                        $('#rslist').empty();
-                        $('#rslist').html("<table></table>");
-                    }
+		<script type="text/javascript">
+                    
                     function guardarComentario(){
-                        limpiaResult();
-                        if (validaClienteNuevo()){
+                        if (validaContacto()){
                             $.post('../controlador/contacto.php', 
                                     // Parametros enviados POST
                                    {
                                     opc: 'IN',
                                     name:$('#nombre').val(),
-                                    rif:$('#telefono').val(),
-                                    tlf:$('#correo').val(),
-                                    fax:$('#comentario').val()
-                                                                    }, 
+                                    tlf:$('#telefono').val(),
+                                    email:$('#email').val(),
+                                    comentario:$('#mensaje').val()
+                                   }, 
                                    function(respuesta){
                                         cliente = JSON.parse(respuesta);
-                                        $('#result_oper').html(usuario['response']);
+                                        $('#result_oper').html(cliente['response']);
                                    }
                             );
                         }else{
-                            $('#result_oper').html("<b style='color:red'>Debe agregar por lo menos el Campo * Nombre, Rif, Dias Credito, Lim. Credito</b>");
+                            $('#result_oper').html("<b style='color:yellow'>Debe agregar por lo menos el Campo * Nombre, Correo</b>");
                         }
+                    }
+                    
+                    function validaContacto(){
+                        if ( ($('#nombre').val().length <= 0) || ($('#email').val().length <= 0) )
+                            return false;
+                        return true;
                     }
              
                 </script>
@@ -75,18 +77,19 @@
 					<article class="columnas columna2">
 					
 						<article id="estilo-formulario">
-							
-									<form class="formulario-contacto" action="../modelos/contacto.php" method="POST">
+                                                                        <!-- action="../modelos/contacto.php" method="POST" -->
+									<form class="formulario-contacto">
 										<h2>Envíanos un Mensaje</h2><br></br>
 										<label>Nombre Completo:</label>
-										<input id="nombre" name="nombre" type="text" placeholder="" onfocus="limpiaResult()" required/><br></br>
+										<input id="nombre" name="nombre" type="text" placeholder=""  required/><br></br>
 										<label>Teléfono:</label>
-										<input id="telefono" name="telefono" type="text" placeholder="" onfocus="limpiaResult()" required/><br></br>
+										<input id="telefono" name="telefono" type="text" placeholder=""  required/><br></br>
 										<label>Email:</label>
-										<input email id="email" name="email" type="text" onfocus="limpiaResult()" required/><br></br>
+										<input id="email" name="email" type="text"  required/><br></br>
 										<label for="mensaje">Mensaje:</label>
-										<textarea id="mensaje" name="mensaje"required></textarea><br></br>
-										<button class="submit" type="submit" onclick="guardarComentario()" >Enviar</button>
+										<textarea id="mensaje" name="mensaje" required></textarea><br></br>
+                                                                                <button class="submit" type="button" onclick="guardarComentario()" >Enviar</button>
+                                                                                <div id="result_oper"></div>
 									</form>						
 						</article>	
 					</article>
