@@ -1,0 +1,121 @@
+
+/*////////VARIABLES PARA LOS COLORES///////////*/
+@azul:#0094B9;
+@blanco:#FFFFFF;
+@gris:#E3E3E3;
+@negro:#000000;
+
+	.redondeado (@medida:1em 1em 1em 1em;)/*Esquinas redondeadas*/	
+			{
+		  		 -webkit-border-radius:  @medida;
+		 		 -moz-border-radius:  @medida;
+		 		 -ms-border-radius:  @medida;
+		 		 -o-border-radius:  @medida;
+		 		  border-radius:  @medida;
+			}
+
+	.degradado (@degra1: -webkit-radial-gradient(@gris, @blanco, @azul); /* Para Safari */
+				@degra2: -o-radial-gradient(@gris, @blanco, @azul); /* Para  Opera 11.1 to 12.0 */
+				@degra3: -moz-radial-gradient(@gris, @blanco, @azul); /* Para Firefox 3.6 to 15 */
+				@degra4: radial-gradient(@gris, @blanco, @azul); /* Standard syntax (must be last) */)
+					
+					{	background: degra1;
+						background: @degra2;
+						background: @degra3;
+						background: @degra4;
+					}
+	.sombreado (@sombra-i:-10px 6px 10px @sombra-contenedor; /*1er valor desplazamiento hacia la izquierda ya que el valor es negativo, 2do valor desplazamiento hacia abajo, 3er valor difuminado de la sombra y el 4to valor representa el color*/
+		        @sombra-d: 10px 6px 10px @sombra-contenedor;) /*1er valor desplazamiento hacia la derecha*/
+
+					{	box-shadow: @sombra-i, @sombra-d;   /*sombra izquierda y  sombra derecha*/
+
+					}
+/*
+.recuadro-formulario{
+		max-width:60%;
+		color: @gris;
+		font-size: 12px;
+		padding-left:5%;
+		margin:50px auto;
+		}*/
+	article#estilo-formulario {		
+		margin: 2em auto;
+		min-height:30%;
+		padding:1em;
+		text-align: justify;
+		vertical-align: top;	
+		.redondeado;
+		background: @azul;
+		.sombreado;
+
+
+			}
+	
+	article#estilo-contacto{
+		text-align: center;
+		vertical-align: top;
+		margin-left:5px;
+		max-width:30%;
+		margin: 2em auto;
+		
+		}
+
+
+/*::::::::::::::::::::::INICIO ESTILOS DEL FORMULARIO::::::::::::::::::::::::*/
+ 
+	 .formulario-contacto label {
+		color: @negro;
+		float: left;
+		font-size: 16px;
+		margin-top: 5px; /*sube un poco el texto*/
+	    padding: 3px;
+		width: 20%;
+		text-align: right;
+	}
+
+	.formulario-contacto input {
+		min-height:1%; 
+		max-width:40%; 
+		padding:5px;	
+		.redondeado;
+	}
+	.formulario-contacto textarea {
+		padding:8px; 
+		max-width:40%;
+		padding:5px;
+	
+
+	}
+	.formulario-contacto button {
+		margin-left:30%;
+		.redondeado;
+	}
+/*/////////////////APARIENCIA DE LOS ELEMENTOS DEL FORMULARIO////////////////////*/
+ 
+	.formulario-contacto input, .formulario-contacto textarea { 
+		border:1px solid #aaa;		
+		border-radius:3px;
+		color: #888;
+		font-size: 1em;
+		padding-right:30px;
+
+	}
+
+/*////////////////////APARIECIA DEL BOTON ENVIAR MENSAJE//////////////// */
+	button.submit {
+		padding: 9px 17px;
+	   font-family: sans-serif;
+	   font-family: cambria;
+	   font-weight: bold; /*Letras del botón en negrita*/
+	   line-height: 1;
+	   background: @negro;
+	color: @blanco;  
+	
+	}
+	button.submit:hover {
+		 color: @azul;	  
+	   background-color: @negro;
+	  
+		
+	}
+ /*::::::::::::::::::::::::::::::::::FIN ESTILOS DEL FORMULARIO::::::::::::::::::::::::::::::::*/

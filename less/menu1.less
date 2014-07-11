@@ -1,0 +1,113 @@
+/*////////VARIABLES PARA LOS COLORES///////////*/
+		@azul:#0094B9;
+		@blanco:#FFFFFF;
+		@gris:#E3E3E3;
+		@negro:#000000;
+		@gris-o: #666666;
+		@azul-claro: #30ACD6;
+	
+
+
+.transicion (@transi:all 0.2s ease-in){
+		-ms-transition:@transi;
+		-moz-transition:@transi;
+		-o-transition:@transi;
+		-webkit-transition:@transi;
+		transition:@transi;}
+
+.redondeado (@medida:1em 1em 1em 1em;)/*Esquinas redondeadas*/	
+			{
+		  		 -webkit-border-radius:  @medida;
+		 		 -moz-border-radius:  @medida;
+		 		 -ms-border-radius:  @medida;
+		 		 -o-border-radius:  @medida;
+		 		  border-radius:  @medida;
+			}
+
+	 /*:::::::::::::::INICIO MENÚ SUPERIOR:::::::::::::::::::::::*/
+		#alineacion ul{
+	   list-style-type: none;
+	   text-align: center;
+	}
+	
+	#alineacion li{
+	   display: inline;
+	   text-align: center;
+	   padding: 0.1em;
+	   margin: 0 8px 0 0;
+	   color: @negro;
+	}
+	
+	#alineacion li a {
+	   padding: 2px 7px 2px 7px;
+	   color: @negro;
+	   background-color:@blanco;
+	   border-radius: 0.4em;
+	   text-decoration: none;
+	   box-shadow: 0px 0px 9px @negro;
+	   font-size:1em; /*Tamaño de las letras del menú*/
+	}
+	
+	#alineacion li a:hover{
+		background-color:@negro;
+		color: @blanco;
+		border-radius: 0.5em;
+		.transicion;
+	}
+
+/*:::::::::::::::::FIN MENÚ SUPERIOR:::::::::::::::::::::::*/
+
+	ul.thick {font-weight:bold;} /*Esta línea coloca las letras del menú 
+                              en negritas,y la llamada de esta función 
+							  en el cuerpo de la página se hará dentro 
+							  de la etiqueta ul de la siguiente manera 
+							  class="thick" */
+
+	/*/::::::::::::::::::::::::::::::INICIO FOOTER/:::::::::::::::::::::::::::*/
+
+   /*::::::::::::::::::::::::INICIO MENÚ INFERIOR:::::::::::::::::::::::::*/
+  
+   #contenedor-footer {
+   	width: 80%;
+   	margin: 0 auto;
+   }
+
+   section#menu-inferior{
+		display: inline-block;
+		margin-top: 2em;
+		margin-left: 0;
+	
+
+   }
+   #menu-inferior ul {
+   		list-style-type: none;
+   }
+
+   #menu-inferior li {
+		text-align: center;
+		 	margin-bottom: 1em;
+   }
+
+   #menu-inferior li a{
+   	 text-decoration: none; /*:::::::::::::Elimina línea del hipervínculo::::::::::::::::*/
+   	 color: @negro;
+
+   }
+
+    #menu-inferior li a:hover{
+		color: @blanco;
+	}
+	
+	.pie{   /*::::::::::Copyright del footer:::::::::::::::*/
+		width: 50%;
+		margin: 0 auto;
+		margin-bottom: 1em;
+		padding: 0.7em;
+		background: @azul-claro;
+		.redondeado (5em 5em 0em 0em;);
+
+
+	}
+
+
+	

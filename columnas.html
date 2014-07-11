@@ -1,0 +1,130 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>www.jesusaf.com - Web responsive Ej 2 </title>
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	}
+#wrapper{
+	position: relative;
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	text-align: left;
+	}
+#header h1 {
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+#col-conten {
+	width: 59%;
+	max-width: 600px;
+	border: 1px dashed #ccc;
+	float: left;
+	margin-bottom: 5px;
+}
+#columns {
+	float: right;
+	width: 39%;
+	border: 1px dashed #ccc;
+	padding-bottom: 3px;
+}
+.colum1 {
+	float:left;
+	width: 49%;
+	border: 1px dotted #CCC;
+	}
+.colum2 {
+	float: right;
+	width: 49%;	
+	border: 1px dotted #CCC;
+}
+@media screen and (max-width: 769px) {
+
+#col-conten {
+	width: 100%;
+	max-width: 100%;
+	border: 1px dashed #ccc;
+}
+#columns {
+	width: 100%;
+	border: 1px dashed #ccc;
+	padding-bottom: 3px;
+}
+.colum1 {
+	float:left;
+	width: 49%;
+	border: 1px dotted #CCC;
+	}
+.colum2 {
+	float: right;
+	width: 49%;	
+	border: 1px dotted #CCC;
+}
+}
+@media screen and (max-width: 481px) {
+
+#menu li {
+	float:left;
+	width: 96%;
+	padding: 0px;
+	}
+#menu a{
+	float:left;
+	background-color:#ccc;
+	width: 100%;
+	padding: 5px;
+	}
+#menu a:hover{  
+	background-color:#eee;
+	width: 100%;
+	padding: 5px;
+	}
+.colum1 {
+	width: 100%;
+	border: 1px dotted #CCC;
+	}
+.colum2 {
+	width: 100%;	
+	border: 1px dotted #CCC;
+}
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+  
+    <div id="col-conten"> 
+      <h3>Aquí la colomna de contenido </h3>
+      <hr>
+      <h4>Columna princpal de contenidos</h4>
+      <p>Aquí es donde se encontraría el contenido de la columna principal en ella podrían ir</p>
+      <ul>
+        <li>Titulares</li>
+        <li>noticias</li>
+        <li>destacados</li>
+        <li>etc.</li>
+      </ul>
+      <a href="http://www.jesusaf.com/diseno-web-responsive/">
+<p></p>
+← volver al post</a>
+<p>&nbsp;</p>
+  </div>
+<div id="columns"> 
+  <h3>Aquí el resto de las columnas </h3>
+  <hr>
+    <div class="colum1"> 
+      <h4>Columna 1</h4>
+      <p>este sería al contenido de la columna de la derecha</p> </div>
+    <div class="colum2"> 
+      <h4>Columna 2</h4>
+      <p>este sería el contenido de la columna izquierda</p> 
+    </div>
+	</div> 
+</div>
+
+</body>

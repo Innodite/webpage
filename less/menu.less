@@ -1,0 +1,114 @@
+
+/*////////VARIABLES PARA LOS COLORES///////////*/
+    @azul:#0094B9;
+    @blanco:#FFFFFF;
+    @gris:#E3E3E3;
+    @negro:#000000;
+    @gris-o: #666666;
+    @azul-claro: #30ACD6;
+
+.transicion (@transi:all 0.2s ease-in){
+    -ms-transition:@transi;
+    -moz-transition:@transi;
+    -o-transition:@transi;
+    -webkit-transition:@transi;
+    transition:@transi;}
+
+.redondeado (@medida:1em 1em 1em 1em;)/*Esquinas redondeadas*/  
+      {
+          -webkit-border-radius:  @medida;
+         -moz-border-radius:  @medida;
+         -ms-border-radius:  @medida;
+         -o-border-radius:  @medida;
+          border-radius:  @medida;
+      }
+
+/*:::::::::::::::::::INICIO DEL MENÚ SUPERIOR:::::::::::::::::::::::::*/
+#nav {
+  margin: 0 auto;
+  padding-top: 0.5em;
+}
+
+#nav li { 
+  display: inline-block;
+  color: @negro; 
+ /* padding: 2px 12px 2px 12px;*/ /*arriba, derecha, abajo, izquierda*/
+ padding: 0.1em;
+  .redondeado;
+}
+
+#nav li a {
+
+     padding: 2px 7px 7px 7px;
+     
+      background-color:@negro;
+    color: @blanco;
+     .redondeado (0.4em);
+     text-decoration: none;
+     box-shadow: 0px 0px 5px @negro;
+     font-size:1em; /*Tamaño de las letras del menú*/
+     font-weight:bold;
+     display: block;/* conserva el ancho del menú*/  
+}
+
+ #nav li a:hover{
+    padding: 2px 7px 2px 7px;
+   color: @negro;
+     background-color:@blanco;
+    .redondeado (0.4em);
+    .transicion;
+  }
+
+@media only screen and (max-width: 767px)  {
+ 
+  #nav li {
+    margin: 0; /*evita que se genera gran espacio entre cada opción del menú*/
+    display: inline-block;
+    width: 70%; /*Ancho del menú cuando es un dispositivo pequeño*/
+    background: none;
+    .redondeado;
+  }
+
+  #nav a {
+     padding: 2px 7px 2px 7px; /*arriba, derecha, abajo, izquierda*/
+    color: @negro;
+    background: @blanco;
+    .redondeado;
+  }
+}
+/*:::::::::::::::::::FIN DEL MENÚ SUPERIOR:::::::::::::::::::::::::*/
+
+/*:::::::::::::::::::::INICIO MENÚ INFERIOR:::::::::::::::::::::::::*/
+  
+   #contenedor-footer {
+    width: 80%;
+    margin: 0 auto;
+   }
+
+   section#menu-inferior{
+    display: inline-block;
+    margin-top: 2em;
+  
+  
+
+   }
+   #menu-inferior ul {
+      list-style-type: none;
+   }
+
+   #menu-inferior li {
+    text-align: center;
+      margin-bottom: 1em;
+   }
+
+   #menu-inferior li a{
+     text-decoration: none; /*:::::::::::::Elimina línea del hipervínculo::::::::::::::::*/
+     color: @negro;
+     font-weight:bold;
+
+   }
+
+    #menu-inferior li a:hover{
+    color: @blanco;
+  }
+  

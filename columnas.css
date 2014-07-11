@@ -1,0 +1,27 @@
+@media screen and (max-width: 481px) {
+ 
+#menu li {
+    float:left;
+    width: 96%;
+    padding: 0px;
+    }
+#menu a{
+    float:left;
+    background-color:#ccc;
+    width: 100%;
+    padding: 5px;
+    }
+#menu a:hover{  
+    background-color:#eee;
+    width: 100%;
+    padding: 5px;
+    }
+.colum1 {
+    width: 100%;
+    border: 1px dotted #CCC;
+    }
+.colum2 {
+    width: 100%;    
+    border: 1px dotted #CCC;
+}
+}
