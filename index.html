@@ -63,8 +63,11 @@
                     .tab a:hover { text-decoration: underline; }
                     .tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; }
                     .tab a.active { font-weight: bold; }
-                    .tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
+                    .tab-container .panel-container { background: #fff; border: solid #666 0px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
                     .panel-container { margin-bottom: 10px; }
+                    /* hack face*/
+                    .fb-like-box { width: 220px;}
+                    .grid-unit{ width: 220px;}
                 </style>
 	</head>
 	<body>		
@@ -244,13 +247,13 @@
                                 <div class='panel-container'>
                                  <!--<div class="column"></div>-->
                                  <div id="tabs1-fb">
-                                    <h2>Twitter</h2>
+                                    <h2>FaceBook</h2>
                                     <div id="fb-root"></div><!--::::::::::::Facebook::::::::-->		
-				    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts" data-width="30px" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+                                    <div class="fb-like-box" style="width: 220px" data-href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts" data-width="30px" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
                                  </div>
                                  <div id="tabs1-tw">
-                                    <h2>FaceBook</h2>
-                                    <div class="grid-unit"> <!--::::::::::Twitter:::::::::::-->	
+                                    <h2>Twitter</h2>
+                                    <div class="grid-unit"> <!--::::::::::Twitter::::::::::: -->	
                                         <a class="twitter-timeline" href="https://twitter.com/innodite" data-widget-id="477036300768256001">Tweets por @innodite</a>
                                     </div>
                                  </div>
