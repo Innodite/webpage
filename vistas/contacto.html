@@ -1,3 +1,7 @@
+<!--:::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::Ing. Yelitza Arreaza:::::::::::::::
+::::::::::Diplomado en Programación Web::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::-->
 <!DOCTYPE html>
 <html  lang='es'>
 	<head>
@@ -10,10 +14,10 @@
 		<script type="text/javascript" src="../js/less-1.5.0.min.js"></script>
 		<script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
 		<script type="text/javascript">
-                    
-					/*
-						comentario de prueba
-					*/
+                    function myFunction1() {
+    					alert("Debe agregar por lo menos el Campo  Nombre y Correo");
+							}
+
                     function guardarComentario(){
                         if (validaContacto()){
                             $.post('../controlador/contacto.php', 
@@ -27,19 +31,25 @@
                                    }, 
                                    function(respuesta){
                                         cliente = JSON.parse(respuesta);
-                                        $('#result_oper').html(cliente['response']);
+                                        alert(cliente['response']);
                                    }
                             );
                         }else{
-                            $('#result_oper').html("<b style='color:yellow'>Debe agregar por lo menos el Campo * Nombre, Correo</b>");
+                            $('#result_oper').html(myFunction1());
                         }
                     }
                     
+
+
                     function validaContacto(){
                         if ( ($('#nombre').val().length <= 0) || ($('#email').val().length <= 0) )
                             return false;
                         return true;
                     }
+
+
+
+
              
                 </script>
 
@@ -47,7 +57,7 @@
 	<body>		
 		<header>
 			<div>
-				<a href="index.html">
+				<a href="../index.html">
 					<img src="../imagenes/logo-innodite1.png" class="logo-innodite"> 
 				</a>
 			</div>
@@ -112,35 +122,16 @@
 <!--::::::::::::::::::::::::::::::::::FIN"ALGUNO DE NUESTROS SERVICIOS":::::::::::::::::::::::::::::::-->
 
 
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-			
-
-
-
 			<footer>
 					<section>
-		<!--::::::::::::::::::::::::::::::::::INICIO MENÚ::::::::::::::::::::::::::::::::::::::::::-->
+<!--::::::::::::::::::::::::::::::::::INICIO MENÚ::::::::::::::::::::::::::::::::::::::::::-->
 						<nav id="nav">
 							<ul class="thick">
-								<li> <a href="index.html">Inicio</a></li>
-								<li><a href="vistas/servicios.html">Servicios</a></li>
-								<li><a href="vistas/portafolio.html">Portafolio</a></li>
-								<li><a href="vistas/nosotros.html">Nosotros</a></li>					 
-								<li><a href="vistas/contacto.html">Contacto</a></li>
+								<li> <a href="../index.html">Inicio</a></li>
+								<li><a href="servicios.html">Servicios</a></li>
+								<li><a href="portafolio.html">Portafolio</a></li>
+								<li><a href="nosotros.html">Nosotros</a></li>					 
+								<li><a href="contacto.html">Contacto</a></li>
 							</ul>
 						</nav>	
 <!--::::::::::::::::::::::::::::::::::::::FIN MENÚ::::::::::::::::::::::::::::::::::::::::::-->
@@ -178,14 +169,14 @@
 					</div>
 				<!--	<section id="menu-inferior">
 						<ul>
-							<li> <a href="index.html">Inicio</a></li>
-							<li><a href="vistas/servicios.html">Servicios</a></li>
-							<li><a href="vistas/portafolio.html">Portafolio</a></li>
-							<li><a href="vistas/nosotros.html">Nosotros</a></li>					 
-							<li><a href="vistas/contacto.html">Contacto</a></li>
+							<li> <a href="../index.html">Inicio</a></li>
+							<li><a href="servicios.html">Servicios</a></li>
+							<li><a href="portafolio.html">Portafolio</a></li>
+							<li><a href="nosotros.html">Nosotros</a></li>					 
+							<li><a href="contacto.html">Contacto</a></li>
 						</ul>
 					</section>-->
-					<p class="pie">Copyright © 2013 Innovación y Diseño C.A, J-40270256-6</p>
+					<p class="pie">Copyright © 2014 Innovación y Diseño C.A, J-40270256-6</p>
 				</section>
 			</footer>
 		   </section> <!--Cierre Sección Contenedor-->

@@ -1,0 +1,164 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.1.3
+-- Dumped by pg_dump version 9.1.3
+-- Started on 2014-07-12 04:58:31
+
+SET statement_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 163 (class 3079 OID 11639)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 1858 (class 0 OID 0)
+-- Dependencies: 163
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 161 (class 1259 OID 17988)
+-- Dependencies: 5
+-- Name: usuario; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE usuario (
+    id_usuario integer NOT NULL,
+    nombre character varying(50),
+    correo character varying(30),
+    comentario character varying(255),
+    telefono character varying(14)
+);
+
+
+ALTER TABLE public.usuario OWNER TO postgres;
+
+--
+-- TOC entry 162 (class 1259 OID 26188)
+-- Dependencies: 5 161
+-- Name: usuario_id_usuario_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE usuario_id_usuario_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usuario_id_usuario_seq OWNER TO postgres;
+
+--
+-- TOC entry 1859 (class 0 OID 0)
+-- Dependencies: 162
+-- Name: usuario_id_usuario_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE usuario_id_usuario_seq OWNED BY usuario.id_usuario;
+
+
+--
+-- TOC entry 1860 (class 0 OID 0)
+-- Dependencies: 162
+-- Name: usuario_id_usuario_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('usuario_id_usuario_seq', 62, true);
+
+
+--
+-- TOC entry 1849 (class 2604 OID 26190)
+-- Dependencies: 162 161
+-- Name: id_usuario; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY usuario ALTER COLUMN id_usuario SET DEFAULT nextval('usuario_id_usuario_seq'::regclass);
+
+
+--
+-- TOC entry 1852 (class 0 OID 17988)
+-- Dependencies: 161
+-- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (1, 'Yelitza', 'yayaya@correo.com', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (2, 'Yelitza', 'yayaya@correo.com', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (3, 'Yelitza', 'yayaya@correo.com', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (4, 'hola', 'yayaya@correo.com', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (5, 'hola', 'yayaya@correo.com', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (38, 'Yelitza Arreaza', 'yarreaza@msn.com', 'Hola ', '04148799287');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (37, 'Yelitza Arreaza', 'yarreaza@msn.com', 'Hola ', '04148799287');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (39, 'Yelitza Arreaza', 'yarreaza@msn.com', 'Hola ', '04148799287');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (40, 'Yelitza Arreaza', 'yarreaza@msn.com', 'Hola ', '04148799287');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (41, 'Javier Urbano', 'jurbano@gmail.com', 'Hola', '1234567890');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (42, 'cszd', 'xzcz', 'zxz', 'dz');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (43, 'd<<', '<zx<z', 'zx', 'x<zx');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (44, 'd<<', '<zx<z', 'zx', 'x<zx');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (45, 'sas', 'asa', 'asa', 'ass');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (46, 'dsad', 'sadasd', 'sdas', 'dasd');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (47, 'dsad', 'sadasd', 'sdas', 'dasd');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (48, 'Yeit', 'dff', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (49, 'Yeit', 'dff', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (50, 'tht', 'thh', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (51, 'fdsf', 'sdff', '', 'dsff');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (52, 'Yeit', 'dff', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (53, 'sa', 'as', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (54, 'fdsf', 'sdff', '', 'dsff');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (55, 'fdsf', 'sdff', '', 'dsff');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (56, 'asdd', 'asda', '', '');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (57, 'fdsf', 'sdff', '', 'dsff');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (58, 'fdsf', 'sdff', '', 'dsff');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (59, 'fdsf', 'sdff', '', 'dsff');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (60, 'fdsf', 'sdff', '', 'dsff');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (61, 'fdsf', 'fdf', '', 'dsff');
+INSERT INTO usuario (id_usuario, nombre, correo, comentario, telefono) VALUES (62, 'fdsf', 'fdf', '', 'dsff');
+
+
+--
+-- TOC entry 1851 (class 2606 OID 26198)
+-- Dependencies: 161 161
+-- Name: pk_usuario; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY usuario
+    ADD CONSTRAINT pk_usuario PRIMARY KEY (id_usuario);
+
+
+--
+-- TOC entry 1857 (class 0 OID 0)
+-- Dependencies: 5
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2014-07-12 04:58:36
+
+--
+-- PostgreSQL database dump complete
+--
+
