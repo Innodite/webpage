@@ -23,6 +23,31 @@
                     $(document).ready( function() { 
                         $('#slider').nivoSlider();
                         $('#tab-container').easytabs();
+                        
+                        // grab the initial top offset of the navigation 
+                        var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
+
+                        // our function that decides weather the navigation bar should have "fixed" css position or not.
+                        var sticky_navigation = function(){
+                            var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+
+                            // if we've scrolled more than the navigation, change its position to fixed to stick to top,
+                            // otherwise change it back to relative
+                            if (scroll_top > sticky_navigation_offset_top) { 
+                                $('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0, 'width':'100%', 'opacity':0.75 });
+                            } else {
+                                $('#sticky_navigation').css({ 'position': 'relative', 'opacity':1}); 
+                            }   
+                        };
+
+                        // run our function on load
+                        sticky_navigation();
+
+                        // and run it again every time you scroll
+                        $(window).scroll(function() {
+                             sticky_navigation();
+                        });
+                        
                     });
                 </script>
 <!--:::::::::::::::::::::FIN SCRIPT SLIDER:::::::::::::::::-->
@@ -50,17 +75,24 @@
   
 			ambilight =
  			 on: (yt_id, container) ->
-   			 $(container).append("<iframe width='560' height='315' src='video.mp4"+yt_id+"?rel=0&controls=0&showinfo=0&autoplay=1' frameborder='0' allowfullscreen></iframe>")    
+   			 $(container).append("<iframe width='560' height='315' src='video.mp4"+yt_id+"?rel=0&controls=0&showinfo=0&autoplay=1' frameborder='0' allowfullscreen></iframe>");    
    			 $("body").tubular({videoId: yt_id});
 
 	
 		</script>
-               
+                <style type="text/css">
+                    #sticky_navigation {
+                        z-index: 1030;
+                    }
+                    .social-icons-row > a {
+                        margin-left: 25px;
+                    }
+                </style>
 	</head>
 	<body>		
 
 			
-		<header>
+                <header>
 			<div>
 				<a href="index.html">
 					<img src="imagenes/logo-innodite1.png" class="logo-innodite"> 
@@ -80,15 +112,17 @@
 
 		 <section id="contenedor"> <!--Inicio Sección Contenedor-->
 <!--::::::::::::::::::::::::::::::::::INICIO MENÚ::::::::::::::::::::::::::::::::::::::::::-->
-			<nav id="nav">
-				<ul class="thick">
-					<li> <a href="index.html">Inicio</a></li>
-					<li><a href="vistas/servicios.html">Servicios</a></li>
-					<li><a href="vistas/portafolio.html">Portafolio</a></li>
-					<li><a href="vistas/nosotros.html">Nosotros</a></li>					 
-					<li><a href="vistas/contacto.html">Contacto</a></li>
-				</ul>
-			</nav>	
+                    <div id="sticky_navigation">
+		    	<nav id="nav">
+                            <ul class="thick">
+		    			<li> <a href="index.html">Inicio</a></li>
+		    			<li><a href="vistas/servicios.html">Servicios</a></li>
+		    			<li><a href="vistas/portafolio.html">Portafolio</a></li>
+		    			<li><a href="vistas/nosotros.html">Nosotros</a></li>					 
+		    			<li><a href="vistas/contacto.html">Contacto</a></li>
+		    		</ul>
+		    	</nav>
+                    </div>
 <!--::::::::::::::::::::::::::::::::::::::FIN MENÚ::::::::::::::::::::::::::::::::::::::::::-->
 
 <!--::::::::::::::::::::::::::::::::::INICIO VIDEO Y TEXTO NOSOTROS:::::::::::::::::::::::::-->
@@ -250,6 +284,7 @@
 		<footer>
 			<section>
 <!--::::::::::::::::::::::::::::::::::INICIO MENÚ::::::::::::::::::::::::::::::::::::::::::-->
+                                <!--
 				<nav id="nav">
 					<ul class="thick">
 						<li> <a href="index.html">Inicio</a></li>
@@ -259,6 +294,7 @@
 						<li><a href="vistas/contacto.html">Contacto</a></li>
 					</ul>
 				</nav>	
+                                -->
 <!--::::::::::::::::::::::::::::::::::::::FIN MENÚ::::::::::::::::::::::::::::::::::::::::::-->
 
      				<div class="ContenedorColumnas">
@@ -277,8 +313,22 @@
 						</article>
 
 						<article class="columnas columna1" >
-						<h3>Título Noticia</h3>												
-								<p id="ver-mas">Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como<a href="#" class="submit"> Leer Mas</a></p>
+                                                                
+                                                    <h3>Cont&aacute;ctenos</h3>
+                                                    <div class="social-icons-row">
+                                                      <a href="#"><img src="imagenes/Twitter-icon-2.png" style="width: 32px; height: 32px"></a>
+                                                      <a href="#"><img src="imagenes/Twitter-icon-2.png" style="width: 32px; height: 32px"></a>
+                                                      <a href="#"><img src="imagenes/Twitter-icon-2.png" style="width: 32px; height: 32px"></a>
+                                                    </div>
+                                                    <div class="social-icons-row">
+                                                      <a href="#"><img src="imagenes/Twitter-icon-2.png" style="width: 32px; height: 32px"></a>
+                                                      <a href="#"><img src="imagenes/Twitter-icon-2.png" style="width: 32px; height: 32px"></a>
+                                                      <a href="#"><img src="imagenes/Twitter-icon-2.png" style="width: 32px; height: 32px"></a>
+                                                    </div>
+                                                    <div class="social-icons-row">
+                                                      <i class="icon-phone icon-large phone-number"></i> +919750227877
+                                                    </div>
+                                                                
 						</article>
 
 						<article class="columnas columna1" >	
