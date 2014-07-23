@@ -7,11 +7,11 @@
 				<h3>Enlaces de Interés</h3>	
 				<section id="menu-inferior">
 					<ul>
-						<li> <a href="#">Enlace1</a></li>
-						<li><a href="#">Enlace2</a></li>
-						<li><a href="#">Enlace3</a></li>
-						<li><a href="#">Enlace4</a></li>					 
-						<li><a href="#">Enlace5</a></li>
+						<li><a href="http://www.madboxpc.com/">Mad Box Pc</a></li>
+						<li><a href="http://www.razorman.net/">RazorMan</a></li>
+						<li><a href="http://www.xda-developers.com/">XDA Developers</a></li>
+						<li><a href="http://www.hdmagazine.org/">Hackers & Developers</a></li>					 
+						<li><a href="http://www.linuxjournal.com/">Linux Journal</a></li>
 					</ul>
 				</section>											
 			</article>

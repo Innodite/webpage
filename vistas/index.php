@@ -13,12 +13,6 @@
                 <script type="text/javascript" src="../js/easytabs/jquery.hashchange.min.js"></script>
                 <script type="text/javascript" src="../js/easytabs/jquery.easytabs.min.js"></script>
  <!--::::::::::::::::::INICIO SCRIPT SLIDER::::::::::::::::-->
-		<script type="text/javascript">
-    				/*$(window).load(function() {
-                                    $('#slider').nivoSlider();
-                                    $('#tab-container').easytabs();
-                                });*/
-   		</script>
                 <script type="text/javascript">
                     $(document).ready( function() { 
                         $('#slider').nivoSlider();
@@ -35,8 +29,12 @@
                             // otherwise change it back to relative
                             if (scroll_top > sticky_navigation_offset_top) { 
                                 $('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0, 'width':'100%', 'opacity':0.75 });
+                                document.getElementById("logofffocus").style.visibility = 'visible';
+                                document.getElementById("contactsocial").style.visibility = 'visible';
                             } else {
-                                $('#sticky_navigation').css({ 'position': 'relative', 'opacity':1}); 
+                                $('#sticky_navigation').css({ 'position': 'relative', 'opacity':1});
+                                document.getElementById("logofffocus").style.visibility = 'hidden';
+                                document.getElementById("contactsocial").style.visibility = 'hidden';
                             }   
                         };
 
@@ -66,7 +64,32 @@
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 		</script>
-<!--:::::::::::::::::::::::::::::::::FIN FACEBOOK::::::::::::::::::::::::::::::::-->         
+<!--:::::::::::::::::::::::::::::::::FIN FACEBOOK::::::::::::::::::::::::::::::::-->
+                <style type="text/css">
+                    #logofffocus {
+                        width: 35px; 
+                        height: 35px; 
+                        margin-left: 20px;
+                        float: left; 
+                        visibility: visible;
+                    }
+                    
+                    #contactsocial {
+                        display: inline-block;
+                        float: right;
+                        margin-right: 20px;
+                        visibility: hidden;
+                    }
+                    
+                    #contactsocial img {
+                        width: 32px;
+                        height: 32px;
+                        vertical-align: top;
+                        margin-top: 0px;
+                        top: 0px;
+                        padding: 1.5px;
+                    }
+                </style>
 	</head>
 	<body>				
 <!--::::::::::::::::::::::::::::::::::INICIO CABECERA:::::::::::::::::::::::::::::::::::::::-->            
@@ -159,21 +182,20 @@
 			<article class="columnas columna4">
                             <div id="tab-container" class='tab-container'>
                                 <ul class='etabs'>
-                                  <li class='tab'><a href="#tabs1-fb">Facebook</a></li>
                                   <li class='tab'><a href="#tabs1-tw">Twitter</a></li>
+                                  <li class='tab'><a href="#tabs1-fb">Facebook</a></li>
                                 </ul>
                                 <div class='panel-container'>
-                                 <!--<div class="column"></div>-->
-                                 <div id="tabs1-fb">
-                                    <h5>Facebook</h5><br>
-                                    <div id="fb-root"></div><!--::::::::::::Facebook::::::::-->		
-				    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts" data-width="30px" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
-                                 </div>
                                  <div id="tabs1-tw">
                                     <h5>Twitter</h5><br>
                                     <div class="grid-unit"> <!--::::::::::Twitter:::::::::::-->	
                                         <a class="twitter-timeline" href="https://twitter.com/innodite" data-widget-id="477036300768256001" data-show-faces="true">Tweets por @innodite</a>
                                     </div>
+                                 </div>
+                                 <div id="tabs1-fb">
+                                    <h5>Facebook</h5><br>
+                                    <div id="fb-root"></div><!--::::::::::::Facebook::::::::-->		
+				    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts" data-width="30px" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
                                  </div>
                                 </div>
                             </div>
