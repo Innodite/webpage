@@ -13,12 +13,6 @@
                 <script type="text/javascript" src="js/easytabs/jquery.hashchange.min.js"></script>
                 <script type="text/javascript" src="js/easytabs/jquery.easytabs.min.js"></script>
  <!--::::::::::::::::::INICIO SCRIPT SLIDER::::::::::::::::-->
-		<script type="text/javascript">
-    				/*$(window).load(function() {
-                                    $('#slider').nivoSlider();
-                                    $('#tab-container').easytabs();
-                                });*/
-   		</script>
                 <script type="text/javascript">
                     $(document).ready( function() { 
                         $('#slider').nivoSlider();
@@ -35,8 +29,12 @@
                             // otherwise change it back to relative
                             if (scroll_top > sticky_navigation_offset_top) { 
                                 $('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0, 'width':'100%', 'opacity':0.75 });
+                                document.getElementById("logofffocus").style.visibility = 'visible';
+                                document.getElementById("contactsocial").style.visibility = 'visible';
                             } else {
-                                $('#sticky_navigation').css({ 'position': 'relative', 'opacity':1}); 
+                                $('#sticky_navigation').css({ 'position': 'relative', 'opacity':1});
+                                document.getElementById("logofffocus").style.visibility = 'hidden';
+                                document.getElementById("contactsocial").style.visibility = 'hidden';
                             }   
                         };
 
@@ -69,7 +67,7 @@
 <!--:::::::::::::::::::::::::::::::::FIN FACEBOOK::::::::::::::::::::::::::::::::-->
 		
 		<script>
-		
+		/*
 		$(document).ready ->
   			ambilight.on "KSqttO3NtCg", ".video"
   
@@ -78,11 +76,35 @@
    			 $(container).append("<iframe width='560' height='315' src='video.mp4"+yt_id+"?rel=0&controls=0&showinfo=0&autoplay=1' frameborder='0' allowfullscreen></iframe>");    
    			 $("body").tubular({videoId: yt_id});
 
-	
+                */
 		</script>
                 <style type="text/css">
                     #sticky_navigation {
                         z-index: 1030;
+                    }
+                    
+                    #logofffocus {
+                        width: 35px; 
+                        height: 35px; 
+                        margin-left: 20px;
+                        float: left; 
+                        visibility: visible;
+                    }
+                    
+                    #contactsocial {
+                        display: inline-block;
+                        float: right;
+                        margin-right: 20px;
+                        visibility: hidden;
+                    }
+                    
+                    #contactsocial img {
+                        width: 32px;
+                        height: 32px;
+                        vertical-align: top;
+                        margin-top: 0px;
+                        top: 0px;
+                        padding: 1.5px;
                     }
 
                     .social-icons-row > a {
@@ -115,13 +137,18 @@
 <!--::::::::::::::::::::::::::::::::::INICIO MENÚ::::::::::::::::::::::::::::::::::::::::::-->
                     <div id="sticky_navigation">
 		    	<nav id="nav">
+                            <img id="logofffocus" src="imagenes/logo1.png"/>
                             <ul class="thick">
 		    			<li> <a href="index.html">Inicio</a></li>
 		    			<li><a href="vistas/servicios.html">Servicios</a></li>
 		    			<li><a href="vistas/portafolio.html">Portafolio</a></li>
 		    			<li><a href="vistas/nosotros.html">Nosotros</a></li>					 
 		    			<li><a href="vistas/contacto.html">Contacto</a></li>
-		    		</ul>
+                            </ul>
+                            <div id="contactsocial">
+                                <img src="imagenes/twitter.png"/>
+                                <img src="imagenes/facebook.png"/>
+                            </div>
 		    	</nav>
                     </div>
 <!--::::::::::::::::::::::::::::::::::::::FIN MENÚ::::::::::::::::::::::::::::::::::::::::::-->
@@ -211,21 +238,20 @@
 			<article class="columnas columna4">
                             <div id="tab-container" class='tab-container'>
                                 <ul class='etabs'>
-                                  <li class='tab'><a href="#tabs1-fb">Facebook</a></li>
                                   <li class='tab'><a href="#tabs1-tw">Twitter</a></li>
+                                  <li class='tab'><a href="#tabs1-fb">Facebook</a></li>
                                 </ul>
                                 <div class='panel-container'>
-                                 <!--<div class="column"></div>-->
-                                 <div id="tabs1-fb">
-                                    <h5>Facebook</h5><br>
-                                    <div id="fb-root"></div><!--::::::::::::Facebook::::::::-->		
-				    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts" data-width="30px" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
-                                 </div>
                                  <div id="tabs1-tw">
                                     <h5>Twitter</h5><br>
                                     <div class="grid-unit"> <!--::::::::::Twitter:::::::::::-->	
                                         <a class="twitter-timeline" href="https://twitter.com/innodite" data-widget-id="477036300768256001" data-show-faces="true">Tweets por @innodite</a>
                                     </div>
+                                 </div>
+                                 <div id="tabs1-fb">
+                                    <h5>Facebook</h5><br>
+                                    <div id="fb-root"></div><!--::::::::::::Facebook::::::::-->		
+				    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts" data-width="30px" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
                                  </div>
                                 </div>
                             </div>
@@ -303,11 +329,11 @@
 						<h3>Enlaces de Interés</h3>	
 						<section id="menu-inferior">
 						<ul>
-							<li> <a href="#">Enlace1</a></li>
-							<li><a href="#">Enlace2</a></li>
-							<li><a href="#">Enlace3</a></li>
-							<li><a href="#">Enlace4</a></li>					 
-							<li><a href="#">Enlace5</a></li>
+							<li><a href="http://www.madboxpc.com/">Mad Box Pc</a></li>
+							<li><a href="http://www.razorman.net/">RazorMan</a></li>
+							<li><a href="http://www.xda-developers.com/">XDA Developers</a></li>
+							<li><a href="http://www.hdmagazine.org/">Hackers & Developers</a></li>					 
+							<li><a href="http://www.linuxjournal.com/">Linux Journal</a></li>
 						</ul>
 					</section>										
 									
