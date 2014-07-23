@@ -29,7 +29,6 @@
 
 /*:::::::::::::::::::INICIO DEL MENÚ SUPERIOR:::::::::::::::::::::::::*/
 #nav {
-  margin-left: 30px;
   margin: 0 auto;
   padding-top: 0.5em;
 }
@@ -38,15 +37,12 @@
   display: inline-block;
   color: @negro; 
  /* padding: 2px 12px 2px 12px;*/ /*arriba, derecha, abajo, izquierda*/
- /*padding: 0.1em;*/
+ padding: 0.1em;
   .redondeado;
 }
 
 #nav li a {
-
      padding: 2px 7px 7px 7px;
-     
-
     color: @blanco;
      text-decoration: none;
      font-size:1em; /*Tamaño de las letras del menú*/
@@ -57,7 +53,6 @@
  #nav li a:hover{
     padding: 2px 7px 2px 7px;
    color: @negro;
-  
     .transicion;
   }
 
@@ -71,14 +66,28 @@
     .redondeado;
   }
 
-  #nav a {
-     padding: 2px 7px 2px 7px; /*arriba, derecha, abajo, izquierda*/
+  #nav li a, #nav li a:hover {
+    padding: 2px 7px 2px 7px; /*arriba, derecha, abajo, izquierda*/
     color: @negro;
- 
+    text-align: center;
+    background: @blanco;
     .redondeado;
+  }
+    #nav li a:hover {
+    color: @blanco;
+    background: @negro;
   }
 }
 /*:::::::::::::::::::FIN DEL MENÚ SUPERIOR:::::::::::::::::::::::::*/
+
+/*:::::::::::::::::INICIO MENÚ TRANSPARENTE:::::::::::::::::::::::::*/
+#sticky_navigation {
+    z-index: 1030;
+}
+.social-icons-row > a {
+    margin-left: 25px;
+}
+/*::::::::::::::::::::FIN MENÚ TRANSPARENTE:::::::::::::::::::::::::*/
 
 /*:::::::::::::::::::::INICIO MENÚ INFERIOR:::::::::::::::::::::::::*/
   
@@ -90,10 +99,8 @@
    section#menu-inferior{
     display: inline-block;
     margin-top: 2em;
-  
-  
+     }
 
-   }
    #menu-inferior ul {
       list-style-type: none;
    }
@@ -107,10 +114,10 @@
      text-decoration: none; /*:::::::::::::Elimina línea del hipervínculo::::::::::::::::*/
      color: @negro;
      font-weight:bold;
-
    }
 
     #menu-inferior li a:hover{
     color: @blanco;
   }
-  
+  /*:::::::::::::::::::::FIN MENÚ INFERIOR:::::::::::::::::::::::::*/
+

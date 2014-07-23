@@ -38,46 +38,20 @@
 <!--:::::::::::::::::::::::::::::::::FIN FACEBOOK::::::::::::::::::::::::::::::::-->
 	</head>
 	<body>		
-		<header>
-			<div>
-				<a href="../index.html">
-					<img src="../imagenes/logo-innodite1.png" class="logo-innodite"> 
-				</a>
-			</div>
-	
-			<div class="logos-sociales">
-				<p>Síguenos en:</p>
-				<a href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts"  target="_blank">
-					<img src="../imagenes/facebook.png" class="clic">
-				</a>
-				<a href="https://twitter.com/"  target="_blank">
-					<img src="../imagenes/twitter.png" class="clic"> 
-				</a>
-			</div>
-		</header>	
+<!--::::::::::::::::::::::::::::::::::INICIO CABECERA:::::::::::::::::::::::::::::::::::::::-->            
+             <?php include 'cabecera.php';?>
+<!--::::::::::::::::::::::::::::::::::::::FIN CABECERA::::::::::::::::::::::::::::::::::::::-->		
 
 		 <section id="contenedor"> <!--Inicio Sección Contenedor-->
 <!--::::::::::::::::::::::::::::::::::INICIO MENÚ::::::::::::::::::::::::::::::::::::::::::-->
-			<nav id="nav">
-				<ul class="thick">
-					<li> <a href="../index.html">Inicio</a></li>
-					<li><a href="servicios.html">Servicios</a></li>
-					<li><a href="portafolio.html">Portafolio</a></li>
-					<li><a href="nosotros.html">Nosotros</a></li>					 
-					<li><a href="contacto.html">Contacto</a></li>
-				</ul>
-			</nav>	
+			<?php include 'menu.php';?>
 <!--::::::::::::::::::::::::::::::::::::::FIN MENÚ::::::::::::::::::::::::::::::::::::::::::-->
-
-
-
 <!--::::::::::::::::::::::::::::::::::INICIO VIDEO Y TEXTO NOSOTROS:::::::::::::::::::::::::-->
-   <!--::::::::::::::::::::::::::::::::::INICIO VIDEO Y TEXTO NOSOTROS:::::::::::::::::::::::::-->
      	 	<br>
      	 	<div class="ContenedorColumnas"> 
      	 	
 	  			<article>
-	     			 <img src="../imagenes/prueba6.jpg" class="img-descriservi">    
+	     			 <img src="../imagenes/prueba8.jpg" class="img-descriservi">    
 	 			</article>	
 	 		
 				<!-- <article class="columnas columna1-1">
@@ -90,7 +64,7 @@
 				
 				  <article class="columnas columna1-1">
 				 <div class="particular1">
-				        <p><b>Descripción del Servicio Nro. 6</b><br><br>Descripción del Servicio: Buscar continuamente la mejora de la calidad tanto de entornos productivos como de nuestra cotidianidad, desarrollando e implementando con carácter creativo e innovador tecnologías de punta al servicio de nuestros clientes.  <br>
+				        <p><b>Descripción del Servicio Nro. 8</b><br><br>Descripción del Servicio: Buscar continuamente la mejora de la calidad tanto de entornos productivos como de nuestra cotidianidad, desarrollando e implementando con carácter creativo e innovador tecnologías de punta al servicio de nuestros clientes.  <br>
 				    </p>
 		
 				    </p>
@@ -152,46 +126,9 @@
 					</article><br>
 		
 <!--::::::::::::::::::::::::::::::::::FIN"ALGUNO DE NUESTROS SERVICIOS":::::::::::::::::::::::::::::::-->		
-     	
-					<footer>
-			<section>
-
-
-     				<div class="ContenedorColumnas">
-						<article class="columnas columna1"	>
-						<h3>Enlaces de Interés</h3>	
-						<section id="menu-inferior">
-						<ul>
-							<li> <a href="#">Enlace1</a></li>
-							<li><a href="#">Enlace2</a></li>
-							<li><a href="#">Enlace3</a></li>
-							<li><a href="#">Enlace4</a></li>					 
-							<li><a href="#">Enlace5</a></li>
-						</ul>
-					</section>										
-									
-						</article>
-
-						<article class="columnas columna1" >
-						<h3>Título Noticia</h3>												
-								<p id="ver-mas">Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como<a href="#" class="submit"> Leer Mas</a></p>
-						</article>
-
-						<article class="columnas columna1" >	
-						<h3>Título Noticia</h3>											
-								<p id="ver-mas">Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como <a href="#" class="submit"> Leer Mas</a></p>
-						</article>
-
-
-						<div class="ContenedorColumnas">
-							
-						</div>
-
-					</div>
-		
-					<p class="pie">Copyright © 2014 Innovación y Diseño C.A, J-40270256-6</p>
-				</section>
-			</footer>
+<!--:::::::::::::::::::::INICIO FOOTER:::::::::::::::::::::::::::-->            
+             <?php include 'footer.php';?>
+<!--:::::::::::::::::::::::FIN FOOTER:::::::::::::::::::::::::::-->
 		   </section> <!--Cierre Sección Contenedor-->
 	</body>
 </html>
