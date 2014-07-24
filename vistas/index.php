@@ -66,6 +66,9 @@
 		</script>
 <!--:::::::::::::::::::::::::::::::::FIN FACEBOOK::::::::::::::::::::::::::::::::-->
                 <style type="text/css">
+                    #sticky_navigation {
+                    	z-index: 1048;
+                    }
                     #logofffocus {
                         width: 35px; 
                         height: 35px; 
