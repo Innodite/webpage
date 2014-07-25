@@ -8,6 +8,8 @@
 @import "menu.less";
 @import "slider.less";
 @import "drop-shadow.less";
+@import "sociales.less";
+@import "apisocial.less";
 /*:::::::::::::::::::FIN ARCHIVOS IMPORTADOS:::::::::::::::::::::::::*/
 
 /*::::::::::::::::::INICIO RUTAS DE LAS IMÁGENES:::::::::::::::::::::*/
@@ -185,8 +187,9 @@ footer{
 	}
 
 .logo-innodite {
-	width: 40%;
+	width: 60%;
 	padding: 20px 30px;
+	margin-left: -50px;
 	height: auto;
 }
 /*:::::::::::::::::::::::INICIO LOGO "ANIMADO:::::::::::::::::::::::::::*/
@@ -205,6 +208,8 @@ footer{
 	margin: auto;
 	margin-top: -100px;
 	}
+
+
 
 
 .clic {
@@ -412,7 +417,7 @@ display: inline-block;
     argin-bottom: 20px;
     .redondeado;
 
-    margin-bottom: 20px;
+  /*  margin-bottom: 20px;*/
    /* background-image: url("@{url-fondo}/fondo.png");*/	
 
 }
@@ -499,12 +504,13 @@ vertical-align: top;
    width: 0.5%;
    padding: 10px;
    margin: 0 auto; 
-  background: @azul;
+  	background: @azul;
    .redondeado (24px 24px 24px 24px);
+    .sombreado;
    color: @negro;
    font-size: 18px;
    padding: 20px;
-   .sombreado;
+  
     
 }
 .columna3-1{
@@ -524,6 +530,9 @@ vertical-align: top;
 
 @media all and (min-width: 400px) {
   .columnas { flex: 1 auto; margin-left: 5px; }
+   video  {width: 30%;}	
+
+
 
 }
 
@@ -541,6 +550,7 @@ vertical-align: top;
 	.columna1-1 { order: 2; } 
 	.columna2-1 { order: 2; }
 	.columna3-1 { order: 3; }
+
 
 }
 
@@ -563,6 +573,8 @@ vertical-align: top;
   	.columna3 { order: 2; }
   		.columna1-1 {width: 90%;}
  	.columna1, .columna3 {width: 40%;padding: 10px;}
+ 
+
 }
 
 /*Tablet o Smarphone*/
@@ -577,6 +589,7 @@ vertical-align: top;
 		margin-top: -70px;
 		margin-right: -10px;
 	}
+
 	.columna3-1, .columna2-1{width: 85%;}
 	.clic {
 		width: 30px;

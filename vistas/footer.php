@@ -42,14 +42,26 @@
 			</article>
 					
 
-			<article class="columnas columna1" >	
-				<h3>Título Noticia</h3>											
-				<p id="ver-mas">Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como <a href="#" class="submit"> Leer Mas</a></p>
+			
+
+	<article class="columnas columna1" >                                                         
+              	 <h3>Síguenos en:</h3>	<br><br>
+				  <div class="SocialFooter">&#62220;</div>
+				  <div class="SocialFooter">&#62217;</div>
+				  <div class="SocialFooter">&#62223;</div>
+				  <div class="SocialFooter">&#62232;</div>
+				  <div class="SocialFooter">&#62235;</div>
+				  <div class="SocialFooter">&#62226;</div>
+				                                                                                                              
 			</article>
-
-
 						
-		</div>			
+		</div>
+
+
+		
+
+
+
 		<p class="pie">Copyright © 2014 Innovación y Diseño C.A, J-40270256-6</p>
 	</section>
 </footer>

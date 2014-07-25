@@ -7,6 +7,7 @@
 		<meta name= "keywords" content="innodite, tecnología, sistemas, informática, soporte, asesorías"/>
 		<link rel="ahortout icon" href="imagenes/innodite.ico"> <!--Agrega ícono a la pestaña del navegador-->
 		<link rel="stylesheet/less" type="text/less" href="../less/estilos.less"/>
+		<link rel="stylesheet/less" type="text/less" href="../less/sociales.less"/>
 		<script type="text/javascript" src="../js/less-1.5.0.min.js"></script>
 		<script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
    		<script type="text/javascript" src="../js/jquery.nivo.slider.js"></script>
@@ -111,15 +112,7 @@
 	     				 <source src="../video.mp4" type="video/mp4" id="video" />                         
 	    			</video>     
 	 			</article>	
-	 			
-				<!-- <article class="columnas columna1-1">
-				 <div class="particular1">
-				    <p><b>Conoce mas de Innodite</b><br><br>Misión: Buscar continuamente la mejora de la calidad tanto de entornos productivos como de nuestra cotidianidad, desarrollando e implementando con carácter creativo e innovador tecnologías de punta al servicio de nuestros clientes.<br>
-				    <a id="ver-mas" href="vistas/nosotros.html" class="submit"> Leer Mas</a>
-				    </p>
-				   </div>			 
-				</article>-->
-				
+	 					
 				  <article class="columnas columna1-1">
 				 <div class="particular1">
 				    <p><b>Conoce mas de Innodite</b><br><br>Visión: Buscar continuamente la mejora de la calidad tanto de entornos productivos como de nuestra cotidianidad, desarrollando e implementando con carácter creativo.<br>
