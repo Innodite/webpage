@@ -108,9 +108,28 @@
      	 	<div class="ContenedorColumnas"> 
      	 	
 	  			<article class="columna2-1">
-	     			<video  controls autoplay  poster='' id="video">
+<!--:::::::::::::::::::::::::::::::::::::::::::::INICIO SLIDER::::::::::::::::::::::::::::::::::::::::-->
+					<div class="ContenedorColumnas">
+					</div> 
+					<div class="particular2">     	
+						<section>
+							<div id="wrapper">
+								<div class="slider-wrapper slideshow">
+									<div id="slider" class="nivoSlider">
+										<img src="../imagenes/slider/imagen-corporativa1.png" data-thumb="imagenes/slider/imagen-corporativa1.png" alt="" />
+										<img src="../imagenes/slider/imagen-corporativa2.png" data-thumb="imagenes/slider/imagen-corporativa2.png" alt=""/> 
+										<img src="../imagenes/slider/imagen-corporativa3.png" data-thumb="imagenes/slider/imagen-corporativa3.png" alt="" data-transition="slideInLeft" />
+										<img src="../imagenes/slider/imagen-corporativa4.png" data-thumb="imagenes/slider/imagen-corporativa4.png" alt="" title="#htmlcaption" />
+									</div>						  
+								</div>
+							</div>
+						</section>
+					</div>
+<!--::::::::::::::::::::::::::::::::::::::::::::::::FIN SLIDER::::::::::::::::::::::::::::::::::::::::-->	
+
+	     			<!--<video  controls autoplay  poster='' id="video">
 	     				 <source src="../video.mp4" type="video/mp4" id="video" />                         
-	    			</video>     
+	    			</video>-->  
 	 			</article>	
 	 					
 				  <article class="columnas columna1-1">
@@ -153,7 +172,7 @@
 		 
 <!--::::::::::::::::::::::::::::::::::FIN"ALGUNO DE NUESTROS SERVICIOS":::::::::::::::::::::::::::::::-->
 <!--:::::::::::::::::::::::::::::::::::::::::::::INICIO SLIDER::::::::::::::::::::::::::::::::::::::::-->
-					<div class="ContenedorColumnas">
+					<!--<div class="ContenedorColumnas">
 					<img src="../imagenes/logo1.png" class="VinetaInnodite"> 
 					<h2>Galería</h2>
 					</div> 
@@ -170,7 +189,7 @@
 								</div>
 							</div>
 						</section>
-					</div>
+					</div>-->
 <!--::::::::::::::::::::::::::::::::::::::::::::::::FIN SLIDER::::::::::::::::::::::::::::::::::::::::-->	
 <!--:::::::::::::::::::::::::::::::::::::::::INICIO REDES SOCIALES:::::::::::::::::::::::::::::::::::::-->
 			</article> <!--Fin Contenedor Principal-->	
