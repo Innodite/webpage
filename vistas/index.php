@@ -18,7 +18,14 @@
                     $(document).ready( function() { 
                         $('#slider').nivoSlider();
                         $('#tab-container').easytabs();
-                        
+                        /*
+                        $('.flip-container').mouseenter(function(){
+                            $('body').addClass('body_m', 1000);
+                        });
+                        $('.flip-container').mouseleave(function(){
+                            $('body').stop().removeClass('body_m', 900);
+                        });
+                        */
                         // grab the initial top offset of the navigation 
                         var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
 
@@ -93,6 +100,72 @@
                         top: 0px;
                         padding: 1.5px;
                     }
+                    
+                    /* Animation voltear */
+                    
+                    .body_m {background:#999;}
+                    
+                    .flip-container {
+                        margin: 0 auto;
+                        -webkit-perspective: 1000;
+                        -moz-perspective: 1000;
+                    }
+
+                    .flip-container:hover .flipper {
+                        -webkit-transform: rotateY(180deg);
+                        -moz-transform: rotateY(180deg);
+                    }
+                    
+                    .flipper {
+                        background:#fff;
+                        -webkit-transition: 0.6s;
+                        -webkit-transform-style: preserve-3d;
+                        -moz-transition: 0.6s;
+                        -moz-transform-style: preserve-3d;
+                        position: relative;
+                    }
+                    
+                    .front, .back {
+                        -webkit-backface-visibility: hidden;
+                        -moz-backface-visibility: hidden;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .front {
+                        text-align:center;
+                        /*padding-top:30px;*/
+                        background:#fff;
+                        z-index: 1;
+                    }
+
+                    .flip-container, .front, .back {
+                        
+                        width: 100%;
+                        /*height: 14.375em;
+                        */
+                    }
+
+                    .back {
+                        background:#636363;
+                        /*padding-top:30px;*/
+                        -webkit-transform: rotateY(-180deg);
+                        -moz-transform: rotateY(-180deg);
+                    }
+                    
+                    .back p {
+                        margin-left:10px;
+                        color:white;font-weight:300;
+                    }
+                    
+                    .blurry {
+                        -webkit-filter: blur(7px);
+                        filter: blur(7px);
+                        -webkit-transform: translateY(0px)
+                                           translate3d(0,0,0);
+                    }
+                    
                 </style>
 	</head>
 	<body>				
@@ -152,9 +225,35 @@
 				</div> 
 				 <div class="particular2">
 					<article class="columnas columna1">
-					   <a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
-							<h4>Servicio</h4>
-						</a>
+                                            <div class="flip-container">
+                                                <div class="flipper">
+                                                    <div class="front">
+                                                        <a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
+                                                            <h4>Servicio</h4>
+                                                        </a>
+                                                    </div>
+                                                    <div class="back">
+                                                        <h4>Service</h4>
+                                                        <p>Esta es la prueba requerida que por cierto no funciona bien en firefox juju..xD</p>
+                                                    </div>
+                                                    <!--
+                                                    <div class="front">
+                                                        <img src="http://www.web-freelancer.com/images/eu.png"/>
+                                                        <p>Oeiras, Portugal</p>
+                                                        <div class="sub"><p>José Dias</p></div>
+                                                    </div>
+                                                    <div class="back">
+                                                        <p id="titulo">José Dias</p>
+                                                        <p>WebDesigner</p>
+                                                        <p>skype: jmldias</p>
+                                                        <p>Birth: 21 Feb 1984</p>
+                                                        <a href="https://www.facebook.com/jose.dias.792740" id="social">f</a>
+                                                        <a href="https://twitter.com/JoseDias_PT" id="social">t</a>
+                                                        <a href="http://pt.linkedin.com/pub/jos%C3%A9-dias/27/928/913" id="social">in</a>
+                                                    </div>
+                                                    -->
+                                                </div>
+                                            </div>
 					</article>
 					<article class="columnas columna3">
 					   <a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
