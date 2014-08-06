@@ -11,13 +11,9 @@
 				
 		<article class="columnas columna2-1">	
 			<br>  
-			<p>Síguenos en:</p>	  	                                                  
-			<div class="SocialCabecera">&#62220;</div>		
-			<div class="SocialCabecera">&#62217;</div>
-			<div class="SocialCabecera">&#62223;</div>
-			<div class="SocialCabecera">&#62232;</div>
-			<div class="SocialCabecera">&#62235;</div>
-			<div class="SocialCabecera">&#62226;</div>	 			 
+			<div class="SocialCabecera">&#62223;</div>	
+			<div class="SocialCabecera">&#62220;</div>	
+			<div class="SocialCabecera">&#62217;</div>				 
 		</article>
 						
 	</div>
