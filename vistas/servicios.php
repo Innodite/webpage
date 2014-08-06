@@ -13,12 +13,6 @@
 		<link rel="stylesheet/less" type="text/less" href="../less/estilos.less"/>
 		<script type="text/javascript" src="../js/less-1.5.0.min.js"></script>
 		<script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
- <!--::::::::::::::::::INICIO SCRIPT SLIDER::::::::::::::::-->
-		<script type="text/javascript">
-    				$(window).load(function() {
-       				 $('#slider').nivoSlider();
-   					 });
-   		</script>
 <!--:::::::::::::::::::::FIN SCRIPT SLIDER:::::::::::::::::-->
 <!--:::::::::::::::::::::::::::INICIO TWITTER::::::::::::::::::::::-->
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");	
@@ -39,8 +33,8 @@
  <!--::::::::::::::::::INICIO SCRIPT MENU TRANSPARENTE::::::::::::::::-->
                 <script type="text/javascript">
                     $(document).ready( function() { 
-                        $('#slider').nivoSlider();
-                        $('#tab-container').easytabs();
+                        //$('#slider').nivoSlider();
+                        //$('#tab-container').easytabs();
                         
               				          // grab the initial top offset of the navigation 
                         var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;

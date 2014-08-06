@@ -1,9 +1,8 @@
-                <script type="text/javascript">
-                    $(document).ready( function() { 
+$(document).ready( function() { 
                         $('#slider').nivoSlider();
                         $('#tab-container').easytabs();
                         
-                                      // grab the initial top offset of the navigation 
+                        // grab the initial top offset of the navigation 
                         var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
 
                         // our function that decides weather the navigation bar should have "fixed" css position or not.
@@ -31,5 +30,4 @@
                              sticky_navigation();
                         });
                         
-                    });
-                </script>
+});

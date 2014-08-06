@@ -563,7 +563,8 @@ border-bottom: 1px solid @gris;
                     
                     .front, .back {
                         -webkit-backface-visibility: hidden;
-                        -moz-backface-visibility: hidden;
+                        /*-moz-backface-visibility: hidden;*/
+                        backface-visibility: hidden;
                         position: absolute;
                         top: 0;
                         left: 0;
@@ -573,12 +574,12 @@ border-bottom: 1px solid @gris;
                         text-align:center;
                         /*padding-top:30px;*/
                         background:#fff;
-                        z-index: 1;
+                        /*z-index: 1;*/
                     }
 
                     .flip-container, .front, .back {
                         
-                        width: 50%;
+                        width: 100%;
                         /*height: 14.375em;
                         */
                     }

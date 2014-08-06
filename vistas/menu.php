@@ -18,7 +18,7 @@
                                 <img src="../imagenes/twitter.png"/>
                                 <img src="../imagenes/facebook.png"/>
                             </div>-->
-         <div class="ContenedorColumnas">                       
+         <!--<div class="ContenedorColumnas">                       -->
            <article class="columnas columna2-1" id="contactsocial">  
                 <div class="SocialCabeceraMenu">&#62232;</div>
                 <div class="SocialCabeceraMenu">&#62235;</div>
