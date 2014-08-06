@@ -21,9 +21,12 @@
                         $('#slider').nivoSlider();
                         $('#tab-container').easytabs();
 <<<<<<< HEAD
+<<<<<<< HEAD
                         
               				          // grab the initial top offset of the navigation 
 =======
+=======
+>>>>>>> origin/master
                         /*
                         $('.flip-container').mouseenter(function(){
                             $('body').addClass('body_m', 1000);
@@ -507,6 +510,7 @@ h3 {
                                                     -->
                                                 </div>
                                             </div>
+<<<<<<< HEAD
 >>>>>>> origin/master
 					</article>
 
@@ -514,6 +518,8 @@ h3 {
 						<a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
 							<h4>Servicio</h4>
 						</a>                                                                                                               
+=======
+>>>>>>> origin/master
 					</article>
 
 					<article class="columnas columna1" >
