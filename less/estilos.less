@@ -83,6 +83,24 @@ header {
 	.sombreado;
 	}
 
+header div {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+
+header div article {
+    &:first-child{
+        margin-left: 30px;
+        margin-right:0px;
+    }
+    &:last-child{
+        margin-right:30px;
+        margin-left:0px;
+    }
+}
+
  nav {
 	background-color:@azul;
 	margin:0em auto;
@@ -435,12 +453,11 @@ border-bottom: 1px solid @gris;
 
 
 @media all and (min-width: 400px) {
-  .columnas { flex: 1 auto; margin-left: 5px; }
+  .columnas { flex: 1 auto; margin-left: 15px; }
    video  {width: 30%;}	
-
-
-
 }
+
+
 
 /*::::::::::::::::::::::::::::::MEDIAQUERY::::::::::::::::::*/
 @media all and (min-width: 850px) {
@@ -452,7 +469,7 @@ border-bottom: 1px solid @gris;
 	.columna2   { order: 2; }
 	.columna3   { order: 3; }
 	.columna4   { order: 4; }
-	.columna2-1 { flex: 2 0px; }
+	//.columna2-1 { flex: 2 0px; }
 	.columna1-1 { order: 2; } 
 	.columna2-1 { order: 2; }
 	.columna3-1 { order: 3; }
@@ -479,15 +496,16 @@ border-bottom: 1px solid @gris;
   	.columna3 { order: 2; }
   		.columna1-1 {width: 90%;}
  	.columna1, .columna3 {width: 40%;padding: 10px;}
- 
-
+        /*.hfondo { height: 200px; }*/
+        .columitem_one { padding-bottom: 150px; }
 }
+
 
 /*Tablet o Smarphone*/
 @media (max-width: 768px) {
 
 	/*.columna3-1 {background-color: @negro;}*/
-	body, p {font-size: 12px;}
+	//body, p {font-size: 12px;}
 	h2 {font-size: 16px;}
 	
 	.logos-sociales{
@@ -513,10 +531,30 @@ border-bottom: 1px solid @gris;
   	.columna1-1 {/*background-color: @verde;*/ padding: 10px; flex: 0 500px;}
   	.img-servicio {width: 100%;}
   	.ContenedorPrincipal {margin: 0 auto;}
-
+        .columitem_one { padding-bottom: 122px; }
   }
-
-
+// Cabecera Logo - IconsSocials  
+@media (min-width:364px) and (max-width:619px){header div article {&:first-child{max-width:225px;}}}  
+@media (max-width:518px){#ish6{ display:none;}}
+@media (max-width:487px){#ish5{ display:none;}}
+@media (max-width:454px){#ish4{ display:none;}}
+@media (max-width:421px){#ish3{ display:none;}}
+@media (max-width:387px){#ish2{ display:none;}}
+@media (max-width:364px){#ish1{ display:none;} .logo-innodite { width:100%; } }
+/* Estos ajustes son un PQC con el 1° item fliper image back 
+   ' Debe haber otra forma de hacer esto. que no sea así
+*/  
+@media (min-width: 338px) and (max-width: 431px){ .hfondo{ min-height: 125px; }}
+@media (min-width: 432px) and (max-width: 502px){ .hfondo{ min-height: 140px; }}
+@media (min-width: 503px) and (max-width: 520px){ .hfondo{ min-height: 150px; }}
+@media (min-width: 521px) and (max-width: 580px){ .hfondo{ min-height: 160px; }}
+@media (min-width: 581px) and (max-width: 599px){
+    .hfondo{ min-height: 170px; }
+    .columitem_one { padding-bottom: 140px; }
+}
+@media (min-width: 600px) and (max-width: 768px){ .hfondo{ min-height: 145px; }}
+@media (min-width: 769px) and (max-width: 1199px){ .hfondo{ min-height: 180px; }}
+/* Fin del PQC 1° item columContainer fliper image */
 /*Escritorio o Tv*/
 @media (min-width: 1200px) {
 	.columna1, .columna2, .columna3,  video  {width: 20%; margin: 0 auto;}	
@@ -524,7 +562,7 @@ border-bottom: 1px solid @gris;
 	/*.columna3-1 {background-color: @azul;}*/
 	.img-servicio {width: 100%;}
 
-
+        .hfondo { min-height: 122px; }
 }
 
 
@@ -535,71 +573,120 @@ border-bottom: 1px solid @gris;
   padding: 1em;
 }
 
+/*::::::::::::::::::::: Inicio Animaciones :::::::::::::::::::::::::::::::::::*/
+/* Animación Atenuación Opacidad 0 - 100 */
+@-webkit-keyframes animatenuation { 0% { opacity: 0.2; } 100% { opacity: 1; }}
+@-moz-keyframes animatenuation { 0% { opacity: 0.2; } 100% { opacity: 1; }}
+@-o-keyframes animatenuation { 0% { opacity: 0.2; } 100% { opacity: 1; }}
+@keyframes animatenuation { 0% { opacity: 0.2; } 100% { opacity: 1; }}
+/* Animación Cambio Color 0 - 100 */
+@keyframes animcolor {
+	0%   { background-color: #000000; color: #ffffff; }
+	100% { background-color: #ffffff; color: #000000; }
+}
+@-moz-keyframes animcolor { /* Firefox */
+	0%   { background-color: #000000; color: #ffffff; }
+	100% { background-color: #ffffff; color: #000000; }
+}
+@-webkit-keyframes animcolor { /* Webkit */
+	0%   { background-color: #000000; color: #ffffff; }
+	100% { background-color: #ffffff; color: #000000; }
+}
+/* Animación Tambaleo */
+@keyframes animbaleo {
+	0% { transform: rotate(-26deg); }
+        75% { transform: rotate(26deg); }
+	100% { transform: rotate(0); }
+}
+@-moz-keyframes animbaleo { /* Firefox */
+	0% { -moz-transform: rotate(-26deg); }
+        75% { -moz-transform: rotate(26deg); }
+	100% { -moz-transform: rotate(0); }
+}
+@-webkit-keyframes animbaleo { /* Webkit */
+        0% { -webkit-transform: rotate(-26deg); }
+        75% { -webkit-transform: rotate(26deg); }
+	100% { -webkit-transform: rotate(0); }
+}
+/*:::::::::::::::::::::inicio flipper imagen container::::::::::::::::::::::::*/                  
+.flip-container {
+    margin: 0 auto;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+}
 
-/*:::::::::::::::::::::inicio voltea imagen::::::::::::::::::::::::::::::::::::*/
-   /* Animation voltear */
-                    
-                    .body_m {background:#999;}
-                    
-                    .flip-container {
-                        margin: 0 auto;
-                        -webkit-perspective: 1000;
-                        -moz-perspective: 1000;
-                    }
+.flip-container:hover .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
 
-                    .flip-container:hover .flipper {
-                        -webkit-transform: rotateY(180deg);
-                        -moz-transform: rotateY(180deg);
-                    }
+.flipper {
+    /*background:#fff;*/
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    position: relative;
+}
                     
-                    .flipper {
-                        background:#fff;
-                        -webkit-transition: 0.6s;
-                        -webkit-transform-style: preserve-3d;
-                        -moz-transition: 0.6s;
-                        -moz-transform-style: preserve-3d;
-                        position: relative;
-                    }
-                    
-                    .front, .back {
-                        -webkit-backface-visibility: hidden;
-                        /*-moz-backface-visibility: hidden;*/
-                        backface-visibility: hidden;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                    }
+.front, .back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
-                    .front {
-                        text-align:center;
-                        /*padding-top:30px;*/
-                        background:#fff;
-                        /*z-index: 1;*/
-                    }
+.front { text-align:center; }
 
-                    .flip-container, .front, .back {
-                        
-                        width: 100%;
-                        /*height: 14.375em;
-                        */
-                    }
+.flip-container, .front, .back { width: 100%; }
 
-                    .back {
-                        background:#636363;
-                        /*padding-top:30px;*/
-                        -webkit-transform: rotateY(-180deg);
-                        -moz-transform: rotateY(-180deg);
-                    }
+.back {
+    background: #ffffff;
+    /*border-style: solid;
+    border-color: white white white @azul;
+    padding: 4px;
+    .redondeado (1em 0em 0em 0em;);*/
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+}
+
+.hfondo:hover{
+    animation:         animcolor 1.5s; /* CSS3 */
+    -moz-animation:    animcolor 1.5s; /* Firefox */
+    -webkit-animation: animcolor 1.5s; /* Webkit */
+}
                     
-                    .back p {
-                        margin-left:10px;
-                        color:white;font-weight:300;
-                    }
+.back p { margin-left:10px; font-weight:300; }
                     
-                    .blurry {
-                        -webkit-filter: blur(7px);
-                        filter: blur(7px);
-                        -webkit-transform: translateY(0px)
-                                           translate3d(0,0,0);
-                    }
-/*:::::::::::::::::::::inicio voltea imagen::::::::::::::::::::::::::::::::::::*/
+.blurry {
+    -webkit-filter: blur(7px);
+    filter: blur(7px);
+    -webkit-transform: translateY(0px)
+                       translate3d(0,0,0);
+}
+/*:::::::::::::::::::::Fin voltea imagen::::::::::::::::::::::::::::::::::::::*/
+/* Anima Atenuación de imagen */
+.animatenua:hover {
+    -webkit-animation: animatenuation 2s;
+    -moz-animation:    animatenuation 2s;
+    -o-animation:      animatenuation 2s;
+    animation:         animatenuation 2s;
+}
+/* Anima Scala de imagen */
+.animascale:hover {
+    transform:         scale(1.09); /* CSS3 */
+    -moz-transform:    scale(1.09); /* Firefox */
+    -webkit-transform: scale(1.09); /* Webkit */
+    -o-transform:      scale(1.09); /* Opera */
+    -ms-transform:     scale(1.09); /* IE 9 */
+}
+/* Anima Rotación de Tambaleo de imagen */
+.animatambaleo:hover {
+    -webkit-animation: animbaleo 1.3s;
+    -moz-animation:    animbaleo 1.3s;
+    -o-animation:      animbaleo 1.3s;
+    animation:         animbaleo 1.3s;
+}
+/*:::::::::::::::::::::::: Fin Animación :::::::::::::::::::::::::::::::::::::*/

@@ -4,12 +4,12 @@
 :::::::::::::::::::::::::::::::::::::::::::::::::-->*/
 
 /*////////VARIABLES PARA LOS COLORES///////////*/
-    @azul:#0094B9;
-    @blanco:#FFFFFF;
-    @gris:#E3E3E3;
-    @negro:#000000;
-    @gris-o: #666666;
-    @azul-claro: #30ACD6;
+@azul:#0094B9;
+@blanco:#FFFFFF;
+@gris:#E3E3E3;
+@negro:#000000;
+@gris-o: #666666;
+@azul-claro: #30ACD6;
 
 .transicion (@transi:all 0.2s ease-in){
     -ms-transition:@transi;
@@ -19,69 +19,134 @@
     transition:@transi;}
 
 .redondeado (@medida:1em 1em 1em 1em;)/*Esquinas redondeadas*/  
-      {
-          -webkit-border-radius:  @medida;
-         -moz-border-radius:  @medida;
-         -ms-border-radius:  @medida;
-         -o-border-radius:  @medida;
-          border-radius:  @medida;
-      }
+{
+    -webkit-border-radius:  @medida;
+    -moz-border-radius:  @medida;
+    -ms-border-radius:  @medida;
+    -o-border-radius:  @medida;
+    border-radius:  @medida;
+}
 
 /*:::::::::::::::::::INICIO DEL MENÚ SUPERIOR:::::::::::::::::::::::::*/
 #nav {
-  margin: 0 auto;
-  padding-top: 0.5em;
+    margin: 0 auto;
+    padding-top: 0.5em;
 }
 
 #nav li { 
-  display: inline-block;
-  color: @negro; 
- /* padding: 2px 12px 2px 12px;*/ /*arriba, derecha, abajo, izquierda*/
- padding: 0.1em;
-  .redondeado;
-}
-
-#nav li a {
-     padding: 2px 7px 7px 7px;
-    color: @blanco;
-     text-decoration: none;
-     font-size:1em; /*Tamaño de las letras del menú*/
-     font-weight:bold;
-     display: block;/* conserva el ancho del menú*/  
-}
-
- #nav li a:hover{
-    padding: 2px 7px 2px 7px;
-   color: @negro;
-    .transicion;
-  }
-
-@media only screen and (max-width: 767px)  {
- 
-  #nav li {
-    margin: 0; /*evita que se genera gran espacio entre cada opción del menú*/
     display: inline-block;
-    width: 70%; /*Ancho del menú cuando es un dispositivo pequeño*/
-    background: none;
+    color: @negro; 
+    /* padding: 2px 12px 2px 12px;*/ /*arriba, derecha, abajo, izquierda*/
+    padding: 0.1em;
     .redondeado;
-  }
-
-  #nav li a, #nav li a:hover {
-    padding: 2px 7px 2px 7px; /*arriba, derecha, abajo, izquierda*/
-    color: @negro;
-    text-align: center;
-    background: @blanco;
-    .redondeado;
-  }
-    #nav li a:hover {
-    color: @blanco;
-    background: @negro;
-  }
- 
 }
+.thick li a {
+    padding: 2px 7px 7px 7px;
+    color: @blanco;
+    text-decoration: none;
+    font-size:1em; /*Tamaño de las letras del menú*/
+    font-weight:bold;
+    display: block;/* conserva el ancho del menú*/  
+}
+
+.thick li a:hover{
+    padding: 2px 7px 2px 7px;
+    color: @negro;
+    .transicion;
+}
+
+@media only screen and (max-width: 280px)  {
+    #nav li {
+        margin: 0; //evita que se genera gran espacio entre cada opción del menú
+        display: inline-block;
+        //width: 100px; //Ancho del menú cuando es un dispositivo pequeño
+        background: none;
+        .redondeado;
+    }
+    #nav li a, #nav li a:hover {
+        padding: 2px 7px 2px 7px; /*arriba, derecha, abajo, izquierda*/
+        color: @negro;
+        text-align: center;
+        background: @blanco;
+        .redondeado;
+    }
+    #nav li a:hover {
+        color: @blanco;
+        background: @negro;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .colapse_options li{
+        margin:0;
+        display: inline-block;
+        background: none;
+        .redondeado;
+    }
+    .colapse_options li a{
+        padding: 2px 7px 2px 7px; //arriba, derecha, abajo, izquierda
+        color: @negro;
+        text-align: center;
+        background: @blanco;
+        font-size:1em; //Tamaño de las letras del menú
+        .redondeado;
+        display: block;
+        font-weight:bold;
+        text-decoration: none;
+    }
+    .colapse_options li a:hover{
+        color: @blanco;
+        background: @negro;
+    }
+}
+
+// Cabecera Menu 
+@media (max-width:767px){#im5{ visibility:hidden; position:absolute;}}
+@media (max-width:537px){#im4{ visibility:hidden; position:absolute;}}
+@media (max-width:473px){#im3{ visibility:hidden; position:absolute;}}
+@media (max-width:373px){#im2{ visibility:hidden; position:absolute;}}
+@media (max-width:260px){
+    #im6{ visibility:hidden; position:absolute;}
+    #im1{ visibility:hidden; position:absolute;}
+    #nav { height: 30px; }
+}
+
+@media (min-width:261px){
+    #imp1{ visibility:hidden; position:absolute;}
+    #imp6{ visibility:hidden; position:absolute;}
+}
+@media (min-width:374px){#imp2{ visibility:hidden; position:absolute;}}
+@media (min-width:474px){#imp3{ visibility:hidden; position:absolute;}}
+@media (min-width:538px){#imp4{ visibility:hidden; position:absolute;}}
 /*:::::::::::::::::::FIN DEL MENÚ SUPERIOR:::::::::::::::::::::::::*/
 
+// Opciones de Menú colapsado
+.colapse_options {
+    display: none;
+    position: absolute;
+    flex-flow: column nowrap;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    background-color: @azul;
+    margin-top: 35px;
+    .redondeado (@medida:0em 0em 1em 1em;);
+    width: 90%;
+}
 
+// Boton de Menú Colapsado
+.colapse_menu{
+    position: absolute;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 28px;
+}
+// Mostrar u Ocultar Boton de Menú Colapsado
+@media (max-width:767px){.colapse_menu{ visibility: visible; }}
+@media (min-width:768px){
+    .colapse_menu{visibility: hidden;}
+    .colapse_options{visibility:hidden;}
+}
 
 .social-icons-row > a {
     margin-left: 25px;
@@ -89,36 +154,34 @@
 
 
 /*:::::::::::::::::::::INICIO MENÚ INFERIOR:::::::::::::::::::::::::*/
-  
-   #contenedor-footer {
+
+#contenedor-footer {
     width: 80%;
     margin: 0 auto;
-   }
+}
 
-   section#menu-inferior{
+section#menu-inferior{
     display: inline-block;
     margin-top: 2em;
-     }
+}
 
-   #menu-inferior ul {
-      list-style-type: none;
-   }
+#menu-inferior ul {
+    list-style-type: none;
+}
 
-   #menu-inferior li {
+#menu-inferior li {
     text-align: center;
-      margin-bottom: 1em;
-   }
+    margin-bottom: 1em;
+}
 
-   #menu-inferior li a{
-     text-decoration: none; /*:::::::::::::Elimina línea del hipervínculo::::::::::::::::*/
-     color: @negro;
-     font-weight:bold;
-   }
+#menu-inferior li a{
+    text-decoration: none; /*:::::::::::::Elimina línea del hipervínculo::::::::::::::::*/
+    color: @negro;
+    font-weight:bold;
+}
 
-    #menu-inferior li a:hover{
-    color: @blanco;
-  }
-  /*:::::::::::::::::::::FIN MENÚ INFERIOR:::::::::::::::::::::::::*/
+#menu-inferior li a:hover{ color: @blanco; }
+/*:::::::::::::::::::::FIN MENÚ INFERIOR:::::::::::::::::::::::::*/
 
 /*:::::::::::::::::::::::::INICIO MENÚ TRANSPARENTE::::::::::::::::::::::::::*/
 
@@ -130,33 +193,30 @@
 
 
 
- #sticky_navigation {
-                      z-index: 1048;
-                    }
-                    #logofffocus {
-                        width: 35px; 
-                        height: 35px; 
-                        margin-left: 20px;
-                        float: left; 
+#sticky_navigation { z-index: 1048; }
 
-                        visibility: visible;
-                    }
-                    
-                    #contactsocial {
-                        display: inline-block;
-                         color: #FFFFFF;
-                        float: right;
-                      
-                        margin-top: -50px;
-                        visibility: hidden;
-                    }
-                    /*
-                    #contactsocial img {
-                        width: 32px;
-                        height: 32px;
-                        vertical-align: top;
-                        margin-top: 0px;
-                        top: 0px;
-                        padding: 1.5px;
-                    }*/
+#logofffocus {
+    width: 0px;
+    height: 0px;
+    margin-left: 20px;
+    float: left;
+    visibility: visible;
+}
+
+#contactsocial {
+    display: inline-block;
+    color: #FFFFFF;
+    float: right;                  
+    margin-top: -50px;
+    visibility: hidden;
+}
+/*
+#contactsocial img {
+    width: 32px;
+    height: 32px;
+    vertical-align: top;
+    margin-top: 0px;
+    top: 0px;
+    padding: 1.5px;
+}*/
 /*:::::::::::::::::::::::::FIN MENÚ TRANSPARENTE::::::::::::::::::::::::::*/

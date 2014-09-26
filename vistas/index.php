@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//ES">
 <html  lang='es'>
 	<head>
 		<title>Innodite</title>
@@ -91,42 +91,40 @@
 
 				</div>
 
-				 <div class="particular2">
-					<article class="columnas columna1">
-                                            <div class="flip-container">
+				 <div class="ContenedorColumnas"> <!-- particular2 -->
+					<article class="columnas columna1 ">
+                                            <div class="flip-container columitem_one">
                                                 <div class="flipper">
                                                     <div class="front">
                                                         <a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
                                                             <h4>Servicio</h4>
                                                         </a>
                                                     </div>
-                                                    <div class="back">
-                                                        <h4>Service</h4>
-                                                        <p>Esta es la prueba requerida que por cierto no funciona bien en firefox juju..xD y esto es para tapar</p>
+                                                    <div class="back hfondo">
+                                                        <h2>Service</h2>
+                                                        <p>Esta es la prueba requerida que por cierto no funciona bien en firefox, y esto es para tapar</p>
                                                     </div>
                                                 </div>
                                             </div>
-
 					</article>
 
-					<article class="columnas columna1" >
+					<article class="columnas columna1 animatenua" >
 						<a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
 							<h4>Servicio</h4>
-						</a>                                                                                                               
-
+						</a>
 					</article>
 
-					<article class="columnas columna1" >
-        				<a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
-							<h4>Servicio</h4>
-						</a>                                       		
-               		</article>
+					<article class="columnas columna1 animascale" >
+                                                <a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
+                                                        <h4>Servicio</h4>
+                                                </a>
+                                        </article>
 
-               		<article class="columnas columna1" >                                                         
-	              		<a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
-							<h4>Servicio</h4>
-						</a>                                                                 
-					</article>						
+                                        <article class="columnas columna1 animatambaleo" >
+                                                <a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
+                                                        <h4>Servicio</h4>
+                                                </a>
+					</article>
 				</div>
 		<a href="servicios.php" class="ver-mas"> Ver Mas</a>
 		 
@@ -135,31 +133,31 @@
 <!--::::::::::::::::::::::::::::::::::INICIO "ALGUNO DE NUESTROS SERVICIOS":::::::::::::::::::::::::::::::-->
      			<div class="ContenedorColumnas">
      			<img src="../imagenes/logo1.png" class="VinetaInnodite"> 
-				<h2>Alguno de Nuestros Servicios</h2>
+				<h2>Alguno de Nuestros Proyectos</h2>
 				</div>
-				<!---->
+
 				<div class="ContenedorColumnas">
 					<article class="columnas columna1"	>
 						<a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
-							<h4>Servicio</h4>
+							<h4>Proyecto</h4>
 						</a>										
 					</article>
 
 					<article class="columnas columna1" >
 						<a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
-							<h4>Servicio</h4>
+							<h4>Proyecto</h4>
 						</a>                                                                                                               
 					</article>
 
 					<article class="columnas columna1" >
         				<a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
-							<h4>Servicio</h4>
+							<h4>Proyecto</h4>
 						</a>                                       		
                		</article>
 
                		<article class="columnas columna1" >                                                         
 	              		<a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
-							<h4>Servicio</h4>
+							<h4>Proyecto</h4>
 						</a>                                                                 
 					</article>						
 				</div>
@@ -212,11 +210,12 @@
 		</div>	<!--Fin Contenedor Columnas-->	
 
 <!--::::::::::::::::::::::::::::::::::INICIO "ALGUNO DE NUESTROS PROYECTOS":::::::::::::::::::::::::::::::-->
+<!--
      			<div class="ContenedorColumnas">
      			<img src="../imagenes/logo1.png" class="VinetaInnodite"> 
 				<h2>Alguno de Nuestros Servicios</h2>
 				</div>
-				<!---->
+				
 				<div class="ContenedorColumnas">
 					<article class="columnas columna1"	>
 						<a href="servicios.php" class="titulo-imagen"><img src="../imagenes/prueba4.jpg" class="img-servicios"><br><br>
@@ -243,7 +242,7 @@
 					</article>						
 				</div>
 		<a href="servicios.php" class="ver-mas"> Ver Mas</a>
-		 
+		 -->
 <!--::::::::::::::::::::::::::::::::::FIN"ALGUNO DE NUESTROS PROYECTOS":::::::::::::::::::::::::::::::-->
 <!--:::::::::::::::::::::::::::::::::::::::::INICIO "NOTICIAS":::::::::::::::::::::::::::::::::::::::::-->
 					<div class="ContenedorColumnas">

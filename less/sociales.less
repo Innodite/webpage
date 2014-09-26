@@ -1,64 +1,75 @@
 .redondeado (@medida:1em 1em 1em 1em;)/*Esquinas redondeadas*/  
-      {
-           -webkit-border-radius:  @medida;
-         -moz-border-radius:  @medida;
-         -ms-border-radius:  @medida;
-         -o-border-radius:  @medida;
-          border-radius:  @medida;
-      }
-  .sombreado (@sombra-i:-10px 6px 10px @sombra-contenedor; /*1er valor desplazamiento hacia la izquierda ya que el valor es negativo, 2do valor desplazamiento hacia abajo, 3er valor difuminado de la sombra y el 4to valor representa el color*/
-            @sombra-d: 10px 6px 10px @sombra-contenedor;) /*1er valor desplazamiento hacia la derecha*/
+{
+    -webkit-border-radius:  @medida;
+    -moz-border-radius:  @medida;
+    -ms-border-radius:  @medida;
+    -o-border-radius:  @medida;
+    border-radius:  @medida;
+}
+.sombreado (@sombra-i:-10px 6px 10px @sombra-contenedor; /*1er valor desplazamiento hacia la izquierda ya que el valor es negativo, 2do valor desplazamiento hacia abajo, 3er valor difuminado de la sombra y el 4to valor representa el color*/
+@sombra-d: 10px 6px 10px @sombra-contenedor;) /*1er valor desplazamiento hacia la derecha*/
 
-          { box-shadow: @sombra-i, @sombra-d;   /*sombra izquierda y  sombra derecha*/
+{ box-shadow: @sombra-i, @sombra-d;   /*sombra izquierda y  sombra derecha*/
 
-          }
-            
+}
+
 .SocialFooter {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin: 0 10px;
-  line-height: 50px;
-  font-family: Entypo;
-  font-size: 20px;
-  text-align: center;
-  color: #FFFFFF;
-  border-radius: 50%;
-  background: #028DB0;
-  overflow: hidden;
-  transition: color #009DC4;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    line-height: 50px;
+    font-family: Entypo;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 50%;
+    background: #028DB0;
+    overflow: hidden;
+    transition: color #009DC4;
 }
 
 .SocialFooter:hover {
-  color: #0094B9;
-  border-radius: 50%;
-  background: #000000;
-  cursor: pointer;
+    color: #0094B9;
+    border-radius: 50%;
+    background: #000000;
+    cursor: pointer;
+}
+
+.SocialHead {
+    display: inline-block;
+    line-height: 70px;
+    font-family: Entypo;
+    font-size: 20px;
+    padding:3px;
+    border-radius: 50%;
+    color: #0094B9;
+    overflow: hidden;
+    transition: color #009DC4;
 }
 
 .SocialCabecera, .SocialCabeceraMenu {
-  display: inline-block;
-  width: 10%;
-  line-height: 70px;
-  font-family: Entypo;
-  font-size: 20px;
-  float: right;
-  text-align: center;
-  /*color: #028DB0;*/
-  border-radius: 50%;
-  color: #0094B9;
-  overflow: hidden;
-  transition: color #009DC4;
-
+    display: inline-block;
+    width: 10%;
+    line-height: 70px;
+    font-family: Entypo;
+    font-size: 20px;
+    float: right;
+    text-align: center;
+    //color: #028DB0;
+    border-radius: 50%;
+    color: #0094B9;
+    overflow: hidden;
+    transition: color #009DC4;
 } 
 .SocialCabeceraMenu {
-  color: #FFFFFF;
-  margin-left: -50px;
-   padding: -30px;
-
+    color: #FFFFFF;
+    margin-left: -50px;
+    padding: -30px;
 }
-.SocialCabeceraMenu:hover,.SocialCabecera:hover{
-  color: #000000;
+
+.SocialHead:hover,.SocialCabeceraMenu:hover,.SocialCabecera:hover{
+    color: #000000;
 }
 
 
@@ -69,61 +80,58 @@
     overflow: hidden; 
     float: right;
     margin-top: -50px;
-  }
+}
 
-  @media (max-width: 768px) {
-
-  .logos-sociales1{width: 110px; margin-top: -70px; margin-right: -10px;}
-
-
-  }
+@media (max-width: 768px) {
+    .logos-sociales1{width: 110px; margin-top: -70px; margin-right: -10px;}
+}
 
 /*::::::::::::::::::::::::INICIO REDES SOCIALES:::::::::::::::::::::::::*/
 .grid-unit{
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 auto;
-  width: 10px;
-  height: 25px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 auto;
+    width: 200px;
+    height: 25px;
 
 }
 .twitter-timeline{
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 auto;
-  height: 400px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 auto;
+    height: 400px;
 
 }
 
 .fb-like-box{
-  margin: 0 auto;
-  width: 200px;
-  height: 400px;
-  
-  /*margin-top: 40px;*/
-  background: #FFFFFF;
-  .redondeado (@medida:5px 5px 5px 5px;);
-  border: 1px solid :#E3E3E3;
-  margin-bottom: 10px;
-  /*.sombreado;*/
+    margin: 0 auto;
+    width: 200px;
+    height: 400px;
+
+    /*margin-top: 40px;*/
+    background: #FFFFFF;
+    .redondeado (@medida:5px 5px 5px 5px;);
+    border: 1px solid :#E3E3E3;
+    margin-bottom: 10px;
+    /*.sombreado;*/
 }
 #fb-root{
-  width: 40%;
+    width: 40%;
 }
 
- .etabs { margin: 0; padding: 0; text-align: left;}
- .tab {background: #000000; color: #FFF;  display: inline-block; zoom:1; *display:inline; border: solid 1px #999; border-bottom: none; -moz-border-radius: 10px 10px 0 0; -webkit-border-radius: 10px 10px 0 0; }
- .tab a {  font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; text-decoration: none; color: #0094B9; }
- .tab.active {  color: #FFF;  padding-top: 6px; position: relative; top: 1px; border-color: #666; }
- .tab a.active { font-weight: bold; }
- .tab-container .panel-container { background: #0094B9;  width: 205px; height: 435px; border: solid #0094B9 1px; padding: 10px; -moz-border-radius: 0 10px 10px 10px; -webkit-border-radius: 0 10px 10px 10px; }
- .tab-container{float: right;}
- .panel-container { margin-bottom: 10px; }
- .tab { text-decoration: none}
+.etabs { margin: 0; padding: 0; text-align: left;}
+.tab {background: #000000; color: #FFF;  display: inline-block; zoom:1; *display:inline; border: solid 1px #999; border-bottom: none; -moz-border-radius: 10px 10px 0 0; -webkit-border-radius: 10px 10px 0 0; }
+.tab a {  font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; text-decoration: none; color: #0094B9; }
+.tab.active {  color: #FFF;  padding-top: 6px; position: relative; top: 1px; border-color: #666; }
+.tab a.active { font-weight: bold; }
+.tab-container .panel-container { background: #0094B9;  width: 205px; height: 435px; border: solid #0094B9 1px; padding: 10px; -moz-border-radius: 0 10px 10px 10px; -webkit-border-radius: 0 10px 10px 10px; }
+.tab-container{float: right;}
+.panel-container { margin-bottom: 10px; }
+.tab { text-decoration: none}
 
- #tabs1-tw, #tabs1-fb{
-  float: left;
- }
+#tabs1-tw, #tabs1-fb{
+    float: left;
+}
 
 
 
@@ -131,11 +139,8 @@
 
 
 .logos-sociales{
-  width: 300px; 
-  float: right;
-  margin: auto;
-  margin-top: -100px;
-  }
-
-
-
+    width: 300px; 
+    float: right;
+    margin: auto;
+    margin-top: -100px;
+}
