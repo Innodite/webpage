@@ -102,22 +102,22 @@
 
 // Cabecera Menu 
 @media (max-width:767px){#im5{ visibility:hidden; position:absolute;}}
-@media (max-width:537px){#im4{ visibility:hidden; position:absolute;}}
-@media (max-width:473px){#im3{ visibility:hidden; position:absolute;}}
-@media (max-width:373px){#im2{ visibility:hidden; position:absolute;}}
-@media (max-width:260px){
+@media (max-width:576px){#im4{ visibility:hidden; position:absolute;}} //537px
+@media (max-width:509px){#im3{ visibility:hidden; position:absolute;}} //473px
+@media (max-width:386px){#im2{ visibility:hidden; position:absolute;}} //373px
+@media (max-width:274px){ //260px
     #im6{ visibility:hidden; position:absolute;}
     #im1{ visibility:hidden; position:absolute;}
     #nav { height: 30px; }
 }
 
-@media (min-width:261px){
+@media (min-width:275px){ //261px
     #imp1{ visibility:hidden; position:absolute;}
     #imp6{ visibility:hidden; position:absolute;}
 }
-@media (min-width:374px){#imp2{ visibility:hidden; position:absolute;}}
-@media (min-width:474px){#imp3{ visibility:hidden; position:absolute;}}
-@media (min-width:538px){#imp4{ visibility:hidden; position:absolute;}}
+@media (min-width:387px){#imp2{ visibility:hidden; position:absolute;}} //374px
+@media (min-width:510px){#imp3{ visibility:hidden; position:absolute;}} //474px
+@media (min-width:577px){#imp4{ visibility:hidden; position:absolute;}} //538px
 /*:::::::::::::::::::FIN DEL MENÚ SUPERIOR:::::::::::::::::::::::::*/
 
 // Opciones de Menú colapsado
@@ -208,8 +208,12 @@ section#menu-inferior{
     color: #FFFFFF;
     float: right;                  
     margin-top: -50px;
+    //padding: 5px;
+    //margin-left: 30px;
     visibility: hidden;
 }
+
+@media (max-width:1000px){#contactsocial {margin-left: 30px;}}
 /*
 #contactsocial img {
     width: 32px;

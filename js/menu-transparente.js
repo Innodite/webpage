@@ -39,5 +39,5 @@ $(document).ready(function() {
     $(window).scroll(function() {
         sticky_navigation();
     });
-
+    
 });

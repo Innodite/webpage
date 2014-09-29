@@ -11,25 +11,6 @@
 		<script type="text/javascript" src="../js/less-1.5.0.min.js"></script>
 		<script type="text/javascript" src="../js/jquery-1.9.0.min.js"></script>
    		<script type="text/javascript" src="../js/jquery.nivo.slider.js"></script>
-                <script type="text/javascript" src="../js/easytabs/jquery.hashchange.min.js"></script>
-                <script type="text/javascript" src="../js/easytabs/jquery.easytabs.min.js"></script>
-                <!--::::::::::::::::::INICIO SCRIPT MENU TRANSPARENTE::::::::::::::::-->
-                <script type="text/javascript" src="../js/menu-transparente.js"></script>
-                <!--::::::::::::::::::FIN SCRIPT MENU TRANSPARENTE::::::::::::::::-->
-                <!--:::::::::::::::::::::::::::INICIO TWITTER::::::::::::::::::::::-->
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");	
-		</script>
-                <!--:::::::::::::::::::::::::::FIN TWITTER::::::::::::::::::::::-->
-                <!--:::::::::::::::::::::::::::::::::INICIO FACEBOOK::::::::::::::::::::::::::::::::-->
-		<script>(function(d, s, id) {
-			  var js, fjs = d.getElementsByTagName(s)[0];
-			  if (d.getElementById(id)) return;
-			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=308327845867165&version=v2.0";
-			  fjs.parentNode.insertBefore(js, fjs);
-			}(document, 'script', 'facebook-jssdk'));
-		</script>
-                <!--:::::::::::::::::::::::::::::::::FIN FACEBOOK::::::::::::::::::::::::::::::::-->
 	</head>
 	<body>				
 <!--::::::::::::::::::::::::::::::::::INICIO CABECERA:::::::::::::::::::::::::::::::::::::::-->            
@@ -196,12 +177,13 @@
                                 <div class='panel-container'>
                                  <div id="tabs1-tw">                         
                                     <div class="grid-unit"> <!--::::::::::Twitter:::::::::::-->	
-                                        <a class="twitter-timeline" href="https://twitter.com/innodite" data-widget-id="477036300768256001" data-show-faces="true">Tweets por @innodite</a>
+                                        <!--<a class="twitter-timeline" href="https://twitter.com/innodite" data-widget-id="477036300768256001" data-show-faces="true">Tweets por @innodite</a>-->
+                                        <a class="twitter-timeline"  href="https://twitter.com/innodite" data-widget-id="516295142043447296" >Tweets por @innodite</a>
                                     </div>
                                  </div>
                                  <div id="tabs1-fb">                                 
                                     <div id="fb-root"></div><!--::::::::::::Facebook::::::::-->		
-				    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts" data-width="30px" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+				    <div class="fb-like-box" data-href="https://www.facebook.com/pages/Innodite/433915703395100?fref=ts" data-width="100%" data-height="100% !important" data-colorscheme="dark" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
                                  </div>
                                 </div>
                             </div>
@@ -271,5 +253,14 @@
              <?php include 'footer.php';?>
 <!--:::::::::::::::::::::::FIN FOOTER:::::::::::::::::::::::::::-->
 		   </section> <!--Cierre Sección Contenedor-->
+        <!--:::::::::::::::::::::::::INICIO EASY TABS::::::::::::::::::::::::::::::::::::-->           
+        <script type="text/javascript" src="../js/easytabs/jquery.hashchange.min.js"></script>
+        <script type="text/javascript" src="../js/easytabs/jquery.easytabs.min.js"></script>
+        <!--:::::::::::::::::::::::::::INICIO TWITTER::::::::::::::::::::::-->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <!--:::::::::::::::::::::::::::::::::INICIO FACEBOOK::::::::::::::::::::::::::::::::-->
+	<script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=308327845867165&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+        <!--::::::::::::::::::INICIO SCRIPT MENU TRANSPARENTE::::::::::::::::-->
+        <script type="text/javascript" src="../js/menu-transparente.js"></script>
 	</body>
 </html>
