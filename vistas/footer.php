@@ -43,8 +43,8 @@
 
 			
 
-			<article class="columnas columna1" >                                                         
-              	 <h3>Síguenos en:</h3>	<br><br>
+                        <article class="columnas columna1" id="linksm">
+                                  <h3>Síguenos en:</h3>	<br><br>
 				  <div class="SocialFooter">&#62220;</div>
 				  <div class="SocialFooter">&#62217;</div>
 				  <div class="SocialFooter">&#62223;</div>

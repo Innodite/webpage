@@ -24,10 +24,14 @@ $(document).ready(function() {
         if (scroll_top > sticky_navigation_offset_top) {
             $('#sticky_navigation').css({'position': 'fixed', 'top': 0, 'left': 0, 'width': '100%', 'opacity': 0.75});
             $('#logofffocus').css({'width': '35px', 'height': '35px', 'visibility': 'visible'});
+            $('#btncolapse').css({'position': 'initial','float':'right','margin-right':'10px'});
+            $('.thick').css({'margin-left':'10px'});
             $('#contactsocial').css({'visibility': 'visible'});
         } else {
             $('#sticky_navigation').css({'position': 'relative', 'opacity': 1});
             $('#logofffocus').css({'width': '0px', 'height': '0px', 'visibility': 'hidden'});
+            $('#btncolapse').css({'position': 'absolute','float':'none','margin-right':'0px'});
+            $('.thick').css({'margin-left':'60px'});
             $('#contactsocial').css({'visibility': 'hidden'});
         }
     };

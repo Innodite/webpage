@@ -4,6 +4,9 @@
             <img id="logofffocus" src="../imagenes/logo1.png"/>
             <img id="btncolapse"  src="../imagenes/btn_colapse_id.png" class="colapse_menu">
             <ul class="colapse_options">
+                <li id="imp0" class="SocialCabeceraMenu">
+                    <a href="#linksm">&#62232; &#62235; &#62226; &#62223; &#62217; &#62220;</a>
+                </li>
                 <li id="imp1"><a href="#">Inicio</a></li>
                 <li id="imp2"><a href="#">Servicios</a></li>
                 <li id="imp3"><a href="#">Portafolio</a></li>
@@ -19,15 +22,6 @@
                 <li id="im5"><a href="nosotros.php">Nosotros</a></li>					 
                 <li id="im6"><a href="contacto.php">Contacto</a></li>
             </ul>
-         
-            <article class="columnas columna2-1" id="contactsocial">  
-                 <div class="SocialCabeceraMenu">&#62232;</div>
-                 <div class="SocialCabeceraMenu">&#62235;</div>
-                 <div class="SocialCabeceraMenu">&#62226;</div> 
-                 <div class="SocialCabeceraMenu">&#62223;</div>
-                 <div class="SocialCabeceraMenu">&#62217;</div>  
-                 <div class="SocialCabeceraMenu">&#62220;</div>             
-             </article>
 	</nav>                                                    
 </div>
 <!--::::::::::::::::::::::::::::::::::::::FIN MENÚ::::::::::::::::::::::::::::::::::::::::::-->
